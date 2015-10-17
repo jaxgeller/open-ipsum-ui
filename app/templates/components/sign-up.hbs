@@ -1,1 +1,7 @@
-{{yield}}
+<form {{action 'signup' on="submit"}}>
+  {{input type="email" value=email placeholder="email"}}
+  {{input type="text" value=username placeholder="username"}}
+  {{input type="password" value=password placeholder="password"}}
+  {{input type="password" value=password_confirmation placeholder="password confirmation"}}
+  <button type="submit">Sign Up</button>
+</form>
