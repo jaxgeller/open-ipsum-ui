@@ -1,0 +1,9 @@
+{{#each model.ipsums as |ipsum|}}
+  {{#link-to 'ipsums.show' ipsum.id}}
+
+    <p>
+      {{ipsum.title}}
+    </p>
+
+  {{/link-to}}
+{{/each}}
