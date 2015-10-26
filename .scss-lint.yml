@@ -1,0 +1,10 @@
+scss_files: 'app/styles/**/*.scss'
+exclude: 'app/styles/_reset.scss'
+
+linters:
+  PropertySortOrder:
+    order: smacss
+  StringQuotes:
+    style: double_quotes
+  Shorthand:
+    enabled: false

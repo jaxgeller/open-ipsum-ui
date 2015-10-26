@@ -1,0 +1,25 @@
+@import
+  "reset",
+  "mixins"
+;
+
+$yellow: #fcee21;
+$gray: #9b9b9b;
+
+$serif: "Lora", serif;
+$sans: Helvetica neue, Helvetica, sans-serif;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  font-family: $serif;
+  color: $gray;
+}
+
+@import
+  "layout",
+  "box"
+;

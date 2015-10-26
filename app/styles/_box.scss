@@ -1,0 +1,22 @@
+.box {
+  display: block;
+  padding: 40px 40px 25px 40px;
+  border: 1px solid rgba(155, 155, 155, 0.25);
+
+  width: 280px;
+  height: 280px;
+  float: left;
+  margin: 20px;
+}
+
+.box-title {
+  padding-bottom: 10px;
+  font-family: $sans;
+  border-bottom: 1px solid $gray;
+}
+
+.box-content {
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 22px;
+}

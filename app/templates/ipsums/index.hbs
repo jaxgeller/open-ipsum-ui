@@ -1,9 +1,6 @@
 {{#each model.ipsums as |ipsum|}}
-  {{#link-to 'ipsums.show' ipsum.id}}
-
-    <p>
-      {{ipsum.title}}
-    </p>
-
+  {{#link-to 'ipsums.show' ipsum.id class="box"}}
+    <h3 class="box-title">{{ipsum.title}}</h3>
+    <p class="box-content">{{ipsum.text}}</p>
   {{/link-to}}
 {{/each}}
