@@ -1,0 +1,38 @@
+.ipsum-toolbar {
+  border-bottom: 2px solid $gray;
+  margin-bottom: 60px;
+  padding-bottom: 18px;
+  @include clearfix;
+}
+
+.ipsum-title {
+  float: left;
+  display: inline-block;
+  padding-top: 5px;
+  font-family: $sans;
+  font-size: 24px;
+}
+
+.copy-button {
+  float: right;
+  display: inline-block;
+  padding: 10px 75px;
+  background-color: $gray;
+  font-family: $sans;
+  color: white;
+}
+
+.ipsum-content {
+  float: left;
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.ipsum-text {
+  line-height: 32px;
+}
+
+.ipsum-options {
+  float: right;
+  margin: 0;
+}

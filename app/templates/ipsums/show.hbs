@@ -1,6 +1,16 @@
-<p>
-  {{model.ipsum.title}}
-</p>
-<p>
-  {{model.generated.text}}
-</p>
+<div class="ipsum-toolbar">
+  <h3 class="ipsum-title">
+    {{model.ipsum.title}}
+  </h3>
+  <a href="#" class="copy-button">Copy to clipboard</a>
+</div>
+
+<article class="ipsum-content">
+  <p class="ipsum-text">
+    {{model.generated.text}}
+  </p>
+</article>
+<div class="box ipsum-options">
+  <h3 class="box-title">Options</h3>
+  <p class="box-content">options here</p>
+</div>
