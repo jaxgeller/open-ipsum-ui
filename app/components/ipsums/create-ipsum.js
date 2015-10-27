@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   ajax: Ember.inject.service(),
-  session: Ember.inject.service(),
+  // session: Ember.inject.service(),
   classNameBindings: ['isValid:active:inactive'],
   isValid: false,
 
@@ -10,6 +10,8 @@ export default Ember.Component.extend({
 
   actions: {
     validate() {
+      console.log(this)
+
       let title = this.get('data.ipsum.title').replace(/ /g,'');
       let text = this.get('data.ipsum.text');
 
