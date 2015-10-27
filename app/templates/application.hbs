@@ -1,3 +1,15 @@
+<nav class="nav">
+  {{#link-to 'browse'}}
+    <img class="nav-logo" src="assets/images/logo.svg">
+  {{/link-to}}
+
+  <ul>
+    <li class="nav-item">{{link-to 'Browse' 'browse'}}</li>
+    <li class="nav-item">{{link-to 'Create' 'ipsums.create'}}</li>
+    <li class="nav-item">{{link-to 'Account' 'account'}}</li>
+  </ul>
+</nav>
+
 <main class="container">
   {{outlet}}
 </main>
