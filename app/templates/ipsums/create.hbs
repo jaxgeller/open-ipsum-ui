@@ -1,12 +1,11 @@
 <div class="ipsum-toolbar">
-  <h3 class="ipsum-title">
-    {{model.ipsum.title}}
-  </h3>
+  {{input placeholder="Add Ipsum Title Here…" value=model.ipsum.title class="ipsum-title"}}
+
   <a href="#" class="publish-button">Publish</a>
 </div>
 
 <article class="ipsum-content">
-  {{model.ipsum.text}}
+  {{textarea value=model.ipsum.text class="ipsum-textarea"}}
 </article>
 <div class="box ipsum-options">
   <h3 class="box-title">Options</h3>
