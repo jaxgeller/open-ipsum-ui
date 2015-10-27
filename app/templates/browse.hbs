@@ -1,0 +1,25 @@
+<div class="topbar">
+  <div class="topbar-content">
+    <input placeholder="Search for ipsums..." type="text" class="topbar-title search">
+  </div>
+</div>
+
+<div class="col-details">
+  <h3 class="col-title">Featured</h3>
+  <p class="col-details-action">More...</p>
+</div>
+
+<div class="content">
+  {{#each model.ipsums as |ipsum|}}
+    {{#link-to 'ipsums.show' ipsum.id class="box"}}
+      <h3 class="box-title">
+        {{ipsum.title}}
+        <img class="star" src="/assets/images/icon-star.svg">
+      </h3>
+      <p class="box-content">{{ipsum.text}}</p>
+    {{/link-to}}
+  {{/each}}
+</div>
+
+
+{{outlet}}

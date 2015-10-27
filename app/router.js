@@ -10,10 +10,13 @@ Router.map(function() {
   this.route('signin', {});
   this.route('signout', {});
   this.route('signup', {});
+
   this.route('ipsums', {  }, function() {
     this.route('show', {path: '/:id'});
     this.route('create', {path: '/create'});
   });
+
+  this.route('browse', {path:'/'});
 });
 
 export default Router;
