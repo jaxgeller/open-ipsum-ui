@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  ajax: Ember.inject.service(),
   model(params) {
-    return this.get('ajax').request(`http://localhost:3000/ipsums/${params.id}`);
+    return this.api.request(`/ipsums/${params.id}`);
   }
 });
