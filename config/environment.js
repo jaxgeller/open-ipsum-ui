@@ -17,6 +17,9 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+
+
+    // "ember-cli-content-security-policy": "0.4.0",
   };
 
   if (environment === 'development') {
