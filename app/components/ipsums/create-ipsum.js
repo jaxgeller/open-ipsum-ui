@@ -1,17 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  ajax: Ember.inject.service(),
-  // session: Ember.inject.service(),
   classNameBindings: ['isValid:active:inactive'],
   isValid: false,
-
   type: 'markov',
-
   actions: {
     validate() {
-      console.log(this)
-
       let title = this.get('data.ipsum.title').replace(/ /g,'');
       let text = this.get('data.ipsum.text');
 
@@ -38,12 +32,7 @@ export default Ember.Component.extend({
           }
         }
 
-        let t = this.get('session.token') + ':';
-
-        this.get('ajax')
-          .request('http://localhost:3000/ipsums', 'POST', {headers: {
-          'Authorization': `Basic ${btoa(t)}`
-        }, data:data})
+        this.api.post('/ipsums', data);
       }
     }
   }
