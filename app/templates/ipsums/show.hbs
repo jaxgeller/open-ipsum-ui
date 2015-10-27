@@ -1,26 +1,2 @@
-<div class="topbar">
-  <div class="topbar-content">
-    <h3 class="topbar-title">{{model.ipsum.title}}</h3>
-  </div>
-  <div class="topbar-action">
-    <a href="#" class="topbar-button active">Copy to clipboard</a>
-  </div>
-</div>
-
-<div class="content">
-  <div class="ipsum-content">
-    <p class="ipsum-text">
-      {{{htmlify model.generated.text}}}
-    </p>
-  </div>
-  <div class="box options">
-    <div class="box-title">Options</div>
-    <div class="box-content">
-      <ul>
-        <li>More</li>
-        <li>HTMLify</li>
-        <li>Curl</li>
-      </ul>
-    </div>
-  </div>
-</div>
+{{#ipsums/show-ipsum data=model}}
+{{/ipsums/show-ipsum}}
