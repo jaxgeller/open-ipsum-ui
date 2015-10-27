@@ -13,6 +13,8 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import('bower_components/clipboard/dist/clipboard.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
