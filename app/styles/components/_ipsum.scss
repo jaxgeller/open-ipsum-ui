@@ -1,0 +1,32 @@
+.ipsum-content {
+  lost-column: 2/3;
+}
+
+.ipsum-text {
+  margin-bottom: 20px;
+  line-height: 32px;
+  font-family: $serif;
+}
+
+.options {
+  cursor: default;
+
+  &:hover {
+    border-color: $light-gray;
+  }
+}
+
+.ipsum-text-input {
+  outline: none;
+  border: none;
+  resize: none;
+
+  color: $gray;
+  font-size: 16px;
+  font-family: $serif;
+  line-height: 32px;
+  width: 100%;
+  display: block;
+  min-height: 400px;
+  height: 100vh;
+}

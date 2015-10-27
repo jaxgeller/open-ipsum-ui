@@ -1,0 +1,22 @@
+$container: 960px;
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.col-details {
+  @include clearfix;
+  lost-row: 1/1;
+}
+
+.col-title {
+  float: left;
+  font-size: 24px;
+}
+
+.col-details-action {
+  float: right;
+  padding-top: 5px;
+}

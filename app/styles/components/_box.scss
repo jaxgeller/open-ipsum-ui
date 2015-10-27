@@ -1,0 +1,47 @@
+@lost gutter 40px;
+
+.content {
+  lost-center: $container;
+}
+
+.box {
+  lost-column: 1/3;
+  margin-bottom: 40px;
+  padding: 40px 40px 20px 40px;
+  border: 1px solid $light-gray;
+
+  transition: border-color ease .2s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $yellow;
+  }
+
+  @include max($tablet) {
+    lost-column: 1/2;
+  }
+
+  @include max($mobile) {
+    lost-column: 1/1;
+  }
+}
+
+.box-title {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: $gray 1px solid;
+}
+
+.box-content {
+  font-size: 12px;
+  font-family: $serif;
+  line-height: 22px;
+  text-align: justify;
+}
+
+.star {
+  float: right;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}

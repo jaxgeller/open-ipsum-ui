@@ -1,0 +1,11 @@
+.search-results {
+  lost-row: 1/1;
+  border-bottom: 2px solid $yellow;
+  padding-bottom: 20px;
+  @include clearfix;
+}
+
+.search-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
