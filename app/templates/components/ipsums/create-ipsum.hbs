@@ -1,0 +1,23 @@
+<div class="topbar">
+  <div class="topbar-content add">
+    {{input
+      placeholder="Add Ipsum Title Here…"
+      test="yes"
+      value=data.ipsum.title
+      class="topbar-title add"
+      key-press="validate"
+    }}
+  </div>
+  <div class="topbar-action">
+    <a href="#" class="topbar-button inactive" {{action "create" on="click"}}>Publish</a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="ipsum-content">
+    {{textarea key-press="validate" placeholder="Just start writing" value=data.ipsum.text class="ipsum-text-input"}}
+  </div>
+  <div class="box options">
+    <div class="box-title">Options</div>
+  </div>
+</div>

@@ -6,7 +6,7 @@ export default Ember.Route.extend({
       ipsum: {
         title: '',
         text: '',
-        user: ''
+        user: null
       }
     }
   }

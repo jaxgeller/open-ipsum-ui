@@ -4,7 +4,7 @@
   padding-bottom: 20px;
   border-bottom: $gray solid 2px;
 
-  &.active {
+  .active & {
     border-color: $yellow;
   }
 }
@@ -65,7 +65,7 @@ input.topbar-title {
     background-color: $yellow;
   }
 
-  &.inactive {
+  .inactive & {
     background-color: $light-gray;
   }
 }

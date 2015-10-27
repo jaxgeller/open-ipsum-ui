@@ -1,23 +1,2 @@
-<div class="topbar">
-  <div class="topbar-content add">
-    {{input placeholder="Add Ipsum Title Here…" value=model.ipsum.title class="topbar-title add"}}
-  </div>
-  <div class="topbar-action">
-    <a href="#" class="topbar-button inactive">Publish</a>
-  </div>
-</div>
-
-<div class="content">
-  <div class="ipsum-content">
-    {{textarea spellcheck="false" placeholder="Just start writing" value=model.ipsum.text class="ipsum-text-input"}}
-  </div>
-  <div class="box options">
-    <div class="box-title">Options</div>
-    <div class="box-content">
-      <ul>
-        <li>Regular Ipsum</li>
-        <li>Markov</li>
-      </ul>
-    </div>
-  </div>
-</div>
+{{#ipsums/create-ipsum data=model}}
+{{/ipsums/create-ipsum}}
