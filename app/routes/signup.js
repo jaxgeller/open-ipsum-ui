@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       this.api.post('/users', {user: u})
         .then(res => {
           this.get('session').setToken(res.token);
+          this.get('session').setUsername(res.username);
           this.transitionTo('browse');
         }, (err) => {
           console.log(err);
