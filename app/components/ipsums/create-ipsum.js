@@ -31,8 +31,7 @@ export default Ember.Component.extend({
             g_markov: true
           }
         }
-
-        this.api.post('/ipsums', data);
+        this.sendAction('create', data);
       }
     }
   }
