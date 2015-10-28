@@ -5,11 +5,17 @@ export default Ember.Controller.extend({
   searchResults: null,
   actions: {
     search() {
-      this.api.request(`/search?q=${this.get('query')}`).then(res=> {
-        if (res.ipsums.length) {
-          this.set('searchResults', res);
-        }
-      });
+      if (this.get('query')) {
+        this.api.request(`/search?q=${this.get('query')}`).then(res=> {
+          if (res.ipsums.length) {
+            this.set('searchResults', res);
+          } else {
+            this.set('searchResults', null)
+          }
+        });
+      } else {
+        this.set('searchResults', null)
+      }
     }
   }
 });

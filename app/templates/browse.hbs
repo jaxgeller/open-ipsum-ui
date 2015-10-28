@@ -1,8 +1,9 @@
 <div class="topbar">
   <div class="topbar-content">
-    <form {{action "search" on="submit"}}>
-        {{input placeholder="Search for ipsums..." type="text" class="topbar-title search" value=query}}
-    </form>
+    {{input key-up="search" placeholder="Search for ipsums..." type="text" class="topbar-title search" value=query}}
+    {{!-- <form {{action "search" on="submit"}}>
+
+    </form> --}}
   </div>
 </div>
 
