@@ -17,6 +17,10 @@ Router.map(function() {
   });
 
   this.route('browse', {path:'/'});
+
+  this.route('users', {}, function() {
+    this.route('show', {path: '/:id'});
+  });
 });
 
 export default Router;

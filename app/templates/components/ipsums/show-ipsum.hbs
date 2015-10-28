@@ -1,6 +1,10 @@
 <div class="topbar">
-  <div class="topbar-content">
+  <div class="topbar-content authored">
     <h3 class="topbar-title">{{data.ipsum.title}}</h3>
+    {{#link-to 'users.show' data.ipsum.user.username}}
+      by {{data.ipsum.user.username}}
+    {{/link-to}}
+    {{!-- {{link-to 'users.show' data.ipsum.user.username}} --}}
   </div>
   <div class="topbar-action">
     <a data-clipboard-target=".ipsum-content" class="topbar-button active" {{action 'click' on='click'}}>
