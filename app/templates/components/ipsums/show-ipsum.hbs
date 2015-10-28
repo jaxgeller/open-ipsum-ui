@@ -3,15 +3,15 @@
     <h3 class="topbar-title">{{data.ipsum.title}}</h3>
   </div>
   <div class="topbar-action">
-    <a href="#" class="topbar-button active">Copy to clipboard</a>
+    <a data-clipboard-target=".ipsum-content" class="topbar-button active" {{action 'click' on='click'}}>
+      {{copyStatus}}
+    </a>
   </div>
 </div>
 
 <div class="content">
   <div class="ipsum-content">
-    <p class="ipsum-text">
-      {{{htmlify data.generated.text}}}
-    </p>
+    {{{htmlify data.generated.text}}}
   </div>
   <div class="box options">
     <div class="box-title">Options</div>
