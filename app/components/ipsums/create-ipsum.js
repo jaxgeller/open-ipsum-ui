@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNameBindings: ['isValid:active:inactive'],
   isValid: false,
-  type: 'markov',
+
   actions: {
     validate() {
       let title = this.get('data.ipsum.title').replace(/ /g,'');

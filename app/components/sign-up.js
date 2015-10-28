@@ -11,10 +11,7 @@ export default Ember.Component.extend({
         password_confirmation: this.get('password_confirmation')
       }
 
-      this.api.post('/users', {user: u})
-        .then(res => {
-          this.get('session').setToken(res.token);
-        });
+      this.sendAction('signup', u);
     }
   }
 });
