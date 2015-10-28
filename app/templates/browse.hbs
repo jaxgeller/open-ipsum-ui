@@ -1,8 +1,23 @@
 <div class="topbar">
   <div class="topbar-content">
-    <input placeholder="Search for ipsums..." type="text" class="topbar-title search">
+    <form {{action "search" on="submit"}}>
+        {{input placeholder="Search for ipsums..." type="text" class="topbar-title search" value=query}}
+    </form>
   </div>
 </div>
+{{#if searchResults}}
+  <div class="search-results">
+      {{#each searchResults.ipsums as |ipsum|}}
+        {{#link-to 'ipsums.show' ipsum.id class="box"}}
+          <h3 class="box-title">
+            {{ipsum.title}}
+            <img class="star" src="/assets/images/icon-star.svg">
+          </h3>
+          <p class="box-content">{{sample-text ipsum.generated_sample}}</p>
+        {{/link-to}}
+      {{/each}}
+  </div>
+{{/if}}
 
 <div class="col-details">
   <h3 class="col-title">Featured</h3>
