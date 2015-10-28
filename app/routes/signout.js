@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import AuthenticatedRoute from 'openipsum-front-v2/mixins/authenticated-route';
+import AuthenticatedRoute from 'open-ipsum-ui/mixins/authenticated-route';
 
 export default Ember.Route.extend(AuthenticatedRoute,{
   session: Ember.inject.service(),

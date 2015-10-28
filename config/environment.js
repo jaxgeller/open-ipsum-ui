@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'openipsum-front-v2',
+    modulePrefix: 'open-ipsum-ui',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

@@ -1,5 +1,5 @@
 {
-  "name": "openipsum-front-v2",
+  "name": "open-ipsum-ui",
   "dependencies": {
     "ember": "2.0.0",
     "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.5",
