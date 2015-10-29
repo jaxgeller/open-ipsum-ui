@@ -1,0 +1,35 @@
+language: node_js
+node_js:
+  - '0.12'
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+  - npm config set spin false
+  - npm install -g npm@^2
+
+install:
+  - npm install -g bower
+  - npm install
+  - bower install
+
+script:
+  - npm test
+
+before_deploy: "ember build -prod"
+
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: AKIAJDF26A5WVEXFWSOQ
+  secret_access_key:
+    secure: dWgGb2cOoLdG5rMQP9ls1U1t78+DN0mhLSDfrto9JjrBFkYPG7hzC1dPPi5JwYURDUJC1+6U2mL2Vk120s1vZFknkY7JQJ9zyG/w8i/q4/h1/6OUBdYCgVKIL3WxJFF4k1aKmfgJyVGXon+nrhKvqytKF20vXgkaCShwYvk7sFlRmxG0uojD4cBBcomNj3dhr0i55e3qRrxKZJCIrgH9HbAbgxZEeBFGcOg98oE/6W5OD6Dz2xj1W8wao7enWDdB0MVecKw5Gsx+m/wlr579DJ2ShJDoiO5tXxYIR3wJVIC0fj2wHPYs4XVZKd4xU2GfCq1AAkt91Mr8CvNvemATvvx5WJGwQ3R4lJcKkev6bXsaQ3YANIr8hJ+CnsvdtTDshKI6iKDTWIThsugaalwzu9uzHYJsuAxpyuEdk0zug7QBAvjVzEm/HicbQNhuM+xPE2i7G1CsMGTZDhL15+eZcM5T0LtERkYhrGDdY4YgU/kEktFQcaBqTBUfaxNus9mVcan3b8W1qPJZRm9ZM4E4slQ8VxSmA9EmcNxB4BTwL7sKL6twPPPBGq2NtgkF1ALioogdHkUwqgzfkOf1jgjfjl0ETlBlG9e+HzmbFOS0kHCKOP1p0nJ4N/rgpMl+3s2xrn8Fp4avdz+oCj/hiaTuk9+pQuENncjYNlCrv9u53f8=
+  bucket: openipsum.com
+  local-dir: dist
+  on:
+    repo: jaxgeller/open-ipsum-ui
