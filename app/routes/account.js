@@ -8,6 +8,10 @@ export default Ember.Route.extend(AuthenticatedRoute, {
   },
 
   actions: {
+    error() {
+      this.controllerFor('error', 'there was an error')
+    },
+
     deleteIpsum(id) {
       this.api.delete(`/ipsums/${id}`)
         .then(res => {

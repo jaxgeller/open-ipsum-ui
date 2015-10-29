@@ -10,7 +10,7 @@ export default Ember.Route.extend({
           this.get('session').setUsername(res.username);
           this.transitionTo('browse');
         }, (err) => {
-          console.log(err);
+          this.controllerFor('signin').set('errors', err.errors)
         });
     }
   }

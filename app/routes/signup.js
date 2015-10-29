@@ -9,9 +9,10 @@ export default Ember.Route.extend({
           this.get('session').setToken(res.token);
           this.get('session').setUsername(res.username);
           this.transitionTo('browse');
-        }, (err) => {
-          console.log(err);
+        }, err => {
+          this.controllerFor('signup').set('errors', JSON.stringify(err.errors));
         });
     }
   }
 });
+

@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import config from 'open-ipsum-ui/config/environment';
-console.log(config)
+
 export default Ember.Service.extend({
   session: Ember.inject.service(),
   ajax: Ember.inject.service(),
