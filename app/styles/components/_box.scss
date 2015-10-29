@@ -34,6 +34,8 @@
 }
 
 .box-content {
+  max-height: 150px;
+  overflow: hidden;
   font-size: 12px;
   font-family: $serif;
   line-height: 22px;
