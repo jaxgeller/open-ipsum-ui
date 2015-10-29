@@ -14,7 +14,7 @@ export default Ember.Component.extend({
           text.split(/\.|\?|\!/).length &&
           text.split(' ').length > 10 ){
 
-        this.set('isValid', true)
+        this.set('isValid', true);
       }
 
       else {

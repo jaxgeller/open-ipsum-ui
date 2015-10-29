@@ -6,13 +6,15 @@ export function htmlify(params) {
 
   let needsClosing = false;
   for (let i = 0; i < text.length; i++) {
-    if (i % 10 === 0)
+    if (i % 10 === 0) {
       dest += '<p class="ipsum-text">';
+    }
 
     dest += text[i];
 
-    if (i % 10 === 9 || i + 1 === text.length)
+    if (i % 10 === 9 || i + 1 === text.length) {
       dest += '</p>';
+    }
   }
 
   return dest;

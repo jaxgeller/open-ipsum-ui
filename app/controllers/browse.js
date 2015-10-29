@@ -10,11 +10,11 @@ export default Ember.Controller.extend({
           if (res.ipsums.length) {
             this.set('searchResults', res);
           } else {
-            this.set('searchResults', null)
+            this.set('searchResults', null);
           }
         });
       } else {
-        this.set('searchResults', null)
+        this.set('searchResults', null);
       }
     }
   }

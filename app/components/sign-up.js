@@ -9,7 +9,7 @@ export default Ember.Component.extend({
         email: this.get('email'),
         password: this.get('password'),
         password_confirmation: this.get('password_confirmation')
-      }
+      };
 
       this.sendAction('signup', u);
     }
