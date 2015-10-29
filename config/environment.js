@@ -45,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.HOST = "https://afternoon-stream-9346.herokuapp.com"
+    ENV.APP.HOST = process.env.OPEN_IPSUM_HOST
   }
 
   return ENV;
