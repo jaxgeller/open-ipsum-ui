@@ -1,9 +1,10 @@
 import Ember from 'ember';
-
+import config from 'open-ipsum-ui/config/environment';
+console.log(config)
 export default Ember.Service.extend({
   session: Ember.inject.service(),
   ajax: Ember.inject.service(),
-  url: 'http://localhost:3000',
+  url: config.APP.HOST,
 
   request(path, data) {
     return this.get('ajax')
