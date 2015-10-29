@@ -2,19 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   query: "",
+  searchQuery: "",
   searchResults: null,
+
+
   actions: {
     search() {
-      if (this.get('query')) {
-        this.api.request(`/search?q=${this.get('query')}`).then(res=> {
-          if (res.ipsums.length) {
+      this.set('searchQuery', this.get('query').trim())
+      let q = this.get('searchQuery');
+
+      if (q) {
+        this.api.request(`/search?q=${q}`).then(res=> {
+          if (res.ipsums.length)
             this.set('searchResults', res);
-          } else {
+          else
             this.set('searchResults', null);
-          }
         });
-      } else {
-        this.set('searchResults', null);
       }
     }
   }

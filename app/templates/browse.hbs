@@ -1,14 +1,13 @@
 <div class="topbar">
   <div class="topbar-content">
     {{input key-up="search" placeholder="Search for ipsums..." type="text" class="topbar-title search" value=query}}
-    {{!-- <form {{action "search" on="submit"}}>
-
-    </form> --}}
   </div>
 </div>
 
-{{#if searchResults}}
+
+{{#if searchQuery}}
   <div class="search-results">
+    {{#if searchResults}}
       {{#each searchResults.ipsums as |ipsum|}}
         {{#link-to 'ipsums.show' ipsum.id class="box"}}
           <h3 class="box-title">
@@ -18,7 +17,11 @@
           <p class="box-content">{{sample-text ipsum.generated_sample}}</p>
         {{/link-to}}
       {{/each}}
-  </div>
+    {{else}}
+      <h3 class="search-title">No ipsums found for "{{query}}"...</h3>
+      <p class="search-text">How about making your own? Create a new ipsum.</p>
+    {{/if}}
+    </div>
 {{/if}}
 
 <div class="col-details">
