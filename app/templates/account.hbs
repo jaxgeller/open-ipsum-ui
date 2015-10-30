@@ -6,7 +6,6 @@
 
 <div class="content">
   {{#each model.user.ipsums as |ipsum|}}
-
     <div class="box">
       <button {{action 'deleteIpsum' ipsum.id}}>delete</button>
       {{#link-to 'ipsums.show' ipsum.id}}
