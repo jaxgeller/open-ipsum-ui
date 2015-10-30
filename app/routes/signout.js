@@ -6,10 +6,10 @@ export default Ember.Route.extend(AuthenticatedRoute,{
   actions: {
     signout() {
       this.api.delete('/signout')
-        .then(res => {
+        .then(() => {
           this.get('session').removeToken();
           this.get('session').removeUsername();
-          this.transitionTo('browse')
+          this.transitionTo('browse');
         });
     }
   }

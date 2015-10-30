@@ -1,3 +1,5 @@
+/*global Clipboard:false */
+
 import Ember from 'ember';
 
 export default Ember.Component.extend({

@@ -4,7 +4,6 @@ export function htmlify(params) {
   let text = params[0].match( /[^\.!\?]+[\.!\?]+/g );
   let dest = "";
 
-  let needsClosing = false;
   for (let i = 0; i < text.length; i++) {
     if (i % 10 === 0) {
       dest += '<p class="ipsum-text">';

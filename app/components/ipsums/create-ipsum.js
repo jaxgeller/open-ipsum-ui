@@ -30,7 +30,7 @@ export default Ember.Component.extend({
             text: this.get('data.ipsum.text'),
             g_markov: true
           }
-        }
+        };
         this.sendAction('create', data);
       }
     }

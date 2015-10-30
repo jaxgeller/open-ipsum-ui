@@ -25,6 +25,6 @@ export default Ember.Service.extend({
 
   getAuthorization() {
     let token = `${this.get('token')}:`;
-    return {'Authorization': `Basic ${btoa(token)}`}
+    return {'Authorization': `Basic ${btoa(token)}`};
   }
 });
