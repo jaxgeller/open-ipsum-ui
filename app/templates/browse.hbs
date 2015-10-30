@@ -8,7 +8,7 @@
 {{#if searchQuery}}
   <div class="search-results">
     {{#if searchResults}}
-      {{#each searchResults.ipsums as |ipsum|}}
+      {{#each searchResults as |ipsum|}}
         {{#link-to 'ipsums.show' ipsum.id class="box"}}
           <h3 class="box-title">
             {{ipsum.title}}
@@ -21,8 +21,9 @@
       <h3 class="search-title">No ipsums found for "{{query}}"...</h3>
       <p class="search-text">How about making your own? Create a new ipsum.</p>
     {{/if}}
-    </div>
+  </div>
 {{/if}}
+
 
 <div class="col-details">
   <h3 class="col-title">Featured</h3>

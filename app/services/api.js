@@ -8,12 +8,13 @@ export default Ember.Service.extend({
 
   request(path, data) {
     return this.get('ajax')
-      .request(`${this.get('url')}${path}`, 'GET', {data: data});
+      .request(`${this.get('url')}${path}`, {type: 'GET', data: data});
   },
 
   post(path, data) {
     return this.get('ajax')
-      .request(`${this.get('url')}${path}`, 'POST', {
+      .request(`${this.get('url')}${path}`, {
+        type: 'POST',
         headers: this.get('session').getAuthorization(),
         data: data,
       });
@@ -21,7 +22,8 @@ export default Ember.Service.extend({
 
   put(path, data) {
     return this.get('ajax')
-      .request(`${this.get('url')}${path}`, 'PUT', {
+      .request(`${this.get('url')}${path}`, {
+        type: 'PUT',
         headers: this.get('session').getAuthorization(),
         data: data,
       });
@@ -29,7 +31,8 @@ export default Ember.Service.extend({
 
   delete(path) {
     return this.get('ajax')
-      .request(`${this.get('url')}${path}`, 'DELETE', {
+      .request(`${this.get('url')}${path}`, {
+        type: 'DELETE',
         headers: this.get('session').getAuthorization()
       });
   }
