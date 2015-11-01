@@ -4,26 +4,29 @@
   </div>
 </div>
 
+{{#liquid-spacer growDuration=250}}
 
-{{#if searchQuery}}
-  <div class="search-results">
-    {{#if searchResults}}
-      {{#each searchResults as |ipsum|}}
-        {{#link-to 'ipsums.show' ipsum.id class="box"}}
-          <h3 class="box-title">
-            {{ipsum.title}}
-            <img class="star" src="/assets/images/icon-star.svg">
-          </h3>
-          <p class="box-content">{{sample-text ipsum.generated_sample}}</p>
-        {{/link-to}}
-      {{/each}}
-    {{else}}
-      <h3 class="search-title">No ipsums found for "{{query}}"...</h3>
-      <p class="search-text">How about making your own? Create a new ipsum.</p>
-    {{/if}}
-  </div>
-{{/if}}
 
+
+  {{#if searchQuery}}
+    <div class="search-results">
+      {{#if searchResults}}
+        {{#each searchResults as |ipsum|}}
+          {{#link-to 'ipsums.show' ipsum.id class="box"}}
+            <h3 class="box-title">
+              {{ipsum.title}}
+              <img class="star" src="/assets/images/icon-star.svg">
+            </h3>
+            <p class="box-content">{{sample-text ipsum.generated_sample}}</p>
+          {{/link-to}}
+        {{/each}}
+      {{else}}
+        <h3 class="search-title">No ipsums found for "{{query}}"...</h3>
+        <p class="search-text">How about making your own? Create a new ipsum.</p>
+      {{/if}}
+    </div>
+  {{/if}}
+{{/liquid-spacer}}
 
 <div class="col-details">
   <h3 class="col-title">Featured</h3>

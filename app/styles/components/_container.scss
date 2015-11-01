@@ -7,6 +7,7 @@ $container: 960px;
 }
 
 .col-details {
+  margin-top: 40px;
   @include clearfix;
   lost-row: 1/1;
 }

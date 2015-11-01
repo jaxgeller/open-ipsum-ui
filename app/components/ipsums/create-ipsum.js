@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   classNameBindings: ['isValid:active:inactive'],
   isValid: false,
+  isMarkov: false,
 
   actions: {
     validate() {
@@ -28,7 +29,7 @@ export default Ember.Component.extend({
           ipsum: {
             title: this.get('data.ipsum.title'),
             text: this.get('data.ipsum.text'),
-            g_markov: true
+            g_markov: this.get('isMarkov')
           }
         };
         this.sendAction('create', data);
