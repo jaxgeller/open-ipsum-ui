@@ -1,5 +1,9 @@
 .ipsum-content {
   lost-column: 2/3;
+
+  @include max(900px) {
+    lost-column: 1/1;
+  }
 }
 
 .ipsum-text {
