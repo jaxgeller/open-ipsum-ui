@@ -2,10 +2,30 @@
   position: fixed;
   top: 60px;
   left: 60px;
+
+  @include max(1220px) {
+    position: static;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 
 .nav-logo {
   margin-bottom: 60px;
+
+  @include max(1220px) {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+.nav-list {
+  display: block;
+
+  @include max(1220px) {
+    display: inline-block;
+  }
 }
 
 .nav-item {
@@ -13,5 +33,9 @@
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @include max(1220px) {
+    display: inline-block;
   }
 }
