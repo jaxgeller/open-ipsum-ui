@@ -3,6 +3,7 @@
     "document",
     "window",
     "location",
+    "localStorage",
     "setTimeout",
     "$",
     "-Promise",

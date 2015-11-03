@@ -6,6 +6,6 @@ moduleFor('route:account', 'Unit | Route | account', {
 });
 
 test('it exists', function(assert) {
-  var route = this.subject();
+  let route = this.subject();
   assert.ok(route);
 });
