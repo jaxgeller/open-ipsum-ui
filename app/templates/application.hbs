@@ -1,3 +1,12 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="nav">
+  {{#link-to 'browse'}}
+    Browse
+  {{/link-to}}
+
+  <ul class="nav-list">
+    <li class="nav-item">{{link-to 'Create' 'ipsums.create'}}</li>
+    <li class="nav-item">{{link-to 'Login' 'login'}}</li>
+  </ul>
+</nav>
 
 {{outlet}}
