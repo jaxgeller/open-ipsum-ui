@@ -15,8 +15,8 @@ export default Ember.Service.extend({
   authenticated(path, type, data) {
     return this.get('ajax').request(`${config.APP.HOST}${path}`, {
       type: type,
-      headers: this.get('session').getAuthorization(),
-      data: data
+      headers: this.get('session').authorize(),
+      data: data || {}
     });
   }
 

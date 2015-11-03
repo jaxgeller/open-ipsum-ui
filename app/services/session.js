@@ -9,9 +9,14 @@ export default Ember.Service.extend({
     this.set('loggedIn', true);
   },
 
-  delete(data) {
+  delete() {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     this.set('loggedIn', false);
+  },
+
+  authorize() {
+    let token = `${localStorage.getItem('token')}:`;
+    return {'Authorization': `Basic ${btoa(token)}`};
   }
 });
