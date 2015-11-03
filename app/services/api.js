@@ -7,8 +7,8 @@ export default Ember.Service.extend({
 
   request(path, type, data) {
     return this.get('ajax').request(`${config.APP.HOST}${path}`, {
-      type: type,
-      data: data
+      type: type || 'GET',
+      data: data || {}
     });
   },
 

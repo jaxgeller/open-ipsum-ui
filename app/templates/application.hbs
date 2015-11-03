@@ -1,11 +1,16 @@
 <nav class="nav">
-  {{#link-to 'browse'}}
-    Browse
-  {{/link-to}}
-
   <ul class="nav-list">
+  <li class="nav-item">{{link-to 'Browse' 'browse'}}</li>
     <li class="nav-item">{{link-to 'Create' 'ipsums.create'}}</li>
+
+    {{#if session.loggedIn}}
+    <li class="nav-item">{{link-to 'Account' 'account'}}</li>
+    <li class="nav-item">{{link-to 'Log Out' 'logout'}}</li>
+    {{else}}
     <li class="nav-item">{{link-to 'Login' 'login'}}</li>
+    {{/if}}
+
+    <li class="nav-item">{{link-to 'Sign Up' 'signup'}}</li>
   </ul>
 </nav>
 
