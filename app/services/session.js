@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  username: '',
-  token: '',
+  token: localStorage.getItem('token') || null,
+  username: localStorage.getItem('username') || null,
   loggedIn: localStorage.getItem('token') || false,
 
   save(data) {

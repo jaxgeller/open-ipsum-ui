@@ -16,8 +16,6 @@ export default Ember.Route.extend({
       this.get('api').request('/users', 'POST', data).then(res=> {
         this.get('session').save(res);
         this.transitionTo('browse');
-      }, err=> {
-        console.log(err);
       });
     }
   }
