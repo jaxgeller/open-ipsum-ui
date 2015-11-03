@@ -14,6 +14,7 @@ module.exports = function(environment) {
     },
 
     APP: {
+      HOST: 'http://localhost:3000'
       // Here you can pass flags/options to your application instance
       // when it is created
     }
@@ -40,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.HOST = process.env.OPEN_IPSUM_HOST
   }
 
   return ENV;
