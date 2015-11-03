@@ -13,6 +13,11 @@ Router.map(function() {
   this.route('logout');
 
   this.route('account');
+
+  this.route('ipsums', function() {
+    this.route('show', {path: '/:id'});
+    this.route('create', {path: '/create'});
+  });
 });
 
 export default Router;

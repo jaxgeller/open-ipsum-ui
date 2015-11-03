@@ -6,6 +6,6 @@ moduleFor('route:ipsums/create', 'Unit | Route | ipsums/create', {
 });
 
 test('it exists', function(assert) {
-  var route = this.subject();
+  let route = this.subject();
   assert.ok(route);
 });
