@@ -6,9 +6,9 @@ export default Ember.Route.extend({
 
   actions: {
     logout() {
-      this.get('api').authenticated('/signout', 'DELETE').then(res => {
-        this.get('session').delete()
-      })
+      this.get('api').authenticated('/signout', 'DELETE').then(() => {
+        this.get('session').delete();
+      });
     }
   }
 });
