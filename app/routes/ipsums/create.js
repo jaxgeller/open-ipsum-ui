@@ -9,7 +9,9 @@ export default Ember.Route.extend(needsAuthorization, {
       let ipsum = {ipsum: this.get('controller').getProperties('title', 'text')};
       ipsum.ipsum.g_markov = this.get('controller.g_markov') || false;
 
-      this.get('api').authenticated('/ipsums', 'POST', ipsum).then(() => {});
+      this.get('api').authenticated('/ipsums', 'POST', ipsum).then((res) => {
+        this.transitionTo('ipsums.show', res.ipsum.id);
+      });
     }
   }
 });
