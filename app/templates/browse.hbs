@@ -3,7 +3,7 @@
     <div class="card">
       <h3 class="card-title">{{ipsum.title}}</h3>
       <div class="card-content">
-        <p>{{ipsum.generated_sample}}</p>
+        <p>{{truncate ipsum.generated_sample size=25}}</p>
       </div>
     </div>
   {{/each}}

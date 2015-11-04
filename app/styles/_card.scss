@@ -11,12 +11,14 @@
 }
 
 .card-title {
+  margin-bottom: 20px;
   padding-bottom: 20px;
+  border-bottom: 1px solid $gray;
 }
 
 .card-content {
   font-family: $serif;
   font-size: 12px;
   line-height: 22px;
-
+  text-align: justify;
 }

@@ -1,12 +1,11 @@
 $gutter: 40px;
-$container: 960px;
-$container-padding: 0 20px;
+$container: 1000px;
 
 @lost gutter #{$gutter};
 
 .container {
   lost-center: $container;
-  padding: $container-padding;
+  padding: 0 $gutter;
 }
 
 .row {
