@@ -19,6 +19,8 @@ body {
   color: $gray;
 }
 
+h2 {font-size: 24px;}
+
 ::selection { background: $yellow; }
 
 // @import
@@ -32,3 +34,12 @@ body {
 
 @import "layout";
 @import "card";
+@import "bar";
+
+
+.content {
+  p {
+    margin-bottom: 20px;
+    line-height: 32px;
+  }
+}

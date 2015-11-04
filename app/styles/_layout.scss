@@ -8,6 +8,10 @@ $container: 1000px;
   padding: 0 $gutter;
 }
 
+.content {
+  lost-column: 2/3;
+}
+
 .row {
   lost-utility: clearfix;
 }

@@ -1,10 +1,8 @@
-<div class="container">
-  {{#each model.ipsums as |ipsum|}}
-    <div class="card">
-      <h3 class="card-title">{{ipsum.title}}</h3>
-      <div class="card-content">
-        <p>{{truncate ipsum.generated_sample size=25}}</p>
-      </div>
+{{#each model.ipsums as |ipsum|}}
+  <div class="card">
+    <h3 class="card-title">{{ipsum.title}}</h3>
+    <div class="card-content">
+      <p>{{truncate ipsum.generated_sample size=25}}</p>
     </div>
-  {{/each}}
-</div>
+  </div>
+{{/each}}
