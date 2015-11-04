@@ -1,0 +1,10 @@
+<div class="container">
+  {{#each model.ipsums as |ipsum|}}
+    <div class="card">
+      <h3 class="card-title">{{ipsum.title}}</h3>
+      <div class="card-content">
+        <p>{{ipsum.generated_sample}}</p>
+      </div>
+    </div>
+  {{/each}}
+</div>

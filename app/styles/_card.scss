@@ -1,0 +1,22 @@
+.card {
+  lost-column: 1/3;
+  height: 280px;
+  margin-bottom: $gutter;
+  padding: 40px 40px 20px 40px;
+  overflow: hidden;
+  border: 1px solid $light-gray;
+
+  transition: .22s all;
+  &:hover {border-color: $yellow;}
+}
+
+.card-title {
+  padding-bottom: 20px;
+}
+
+.card-content {
+  font-family: $serif;
+  font-size: 12px;
+  line-height: 22px;
+
+}

@@ -1,0 +1,14 @@
+$gutter: 40px;
+$container: 960px;
+$container-padding: 0 20px;
+
+@lost gutter #{$gutter};
+
+.container {
+  lost-center: $container;
+  padding: $container-padding;
+}
+
+.row {
+  lost-utility: clearfix;
+}

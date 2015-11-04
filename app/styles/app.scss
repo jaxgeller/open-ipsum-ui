@@ -1,0 +1,34 @@
+@import "mixins";
+@import "reset";
+
+$yellow: #fcee21;
+$gray: #666666;
+$light-gray: rgba(155, 155, 155, 0.25);
+
+$serif: "Lora", Georgia, serif;
+$sans: Helvetica neue, Helvetica, sans-serif;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding-top: 60px;
+  font-size: 1em;
+  font-family: $sans;
+  color: $gray;
+}
+
+::selection { background: $yellow; }
+
+// @import
+//   "components/container",
+//   "components/box",
+//   "components/nav",
+//   "components/ipsum",
+//   "components/topbar",
+//   "components/search"
+// ;
+
+@import "layout";
+@import "card";
