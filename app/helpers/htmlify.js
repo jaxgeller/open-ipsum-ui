@@ -2,8 +2,7 @@ import Ember from 'ember';
 import random from 'open-ipsum-ui/utils/random-int';
 
 export function htmlify(params) {
-  const splitters = /\.|\?|\!/;
-  let text = params[0].split(splitters);
+  let text = params[0].match(/\(?[A-Z][^\.]+[\.!\?]\)?/g);
   let holder = [];
 
   for (let i =0; i < text.length; i++) {

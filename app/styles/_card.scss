@@ -10,6 +10,10 @@
   &:hover {border-color: $yellow;}
 }
 
+.no-highlight {
+  &:hover{border-color: $light-gray;}
+}
+
 .card-title {
   margin-bottom: 20px;
   padding-bottom: 20px;
