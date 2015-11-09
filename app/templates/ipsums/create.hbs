@@ -1,6 +1,24 @@
-<form {{action "create" on="submit"}}>
-  {{input value=title}}
-  {{textarea value=text}}
-  {{input type="checkbox" checked=g_markov}} Markov?
-  <button type="submit">Create</button>
-</form>
+<div class="bar">
+  <div class="bar-info">
+    {{input value=model.ipsum.title placeholder="Ipsum Title"}}
+  </div>
+  <div class="bar-action">
+    <div class="button" {{action "create"}}>Submit</div>
+  </div>
+</div>
+
+<div class="content">
+  {{textarea value=model.ipsum.text class="create-area" placeholder="Just start typing"}}
+</div>
+
+<div class="card no-highlight">
+  <h3 class="card-title">Options</h3>
+  <div class="card-content">
+    <ul>
+      <li>{{input type="checkbox" checked=model.ipsum.g_markov}} Markov</li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</div>
+
