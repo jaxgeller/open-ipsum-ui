@@ -23,15 +23,6 @@ h2 {font-size: 24px;}
 
 ::selection { background: $yellow; }
 
-// @import
-//   "components/container",
-//   "components/box",
-//   "components/nav",
-//   "components/ipsum",
-//   "components/topbar",
-//   "components/search"
-// ;
-
 @import "layout";
 @import "card";
 @import "bar";

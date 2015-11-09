@@ -1,7 +1,9 @@
 $gutter: 40px;
 $container: 1000px;
-
 @lost gutter #{$gutter};
+
+$tablet: 960px;
+
 
 .container {
   lost-center: $container;
@@ -10,6 +12,10 @@ $container: 1000px;
 
 .content {
   lost-column: 2/3;
+
+  @include max($tablet) {
+    lost-column: 1/1;
+  }
 }
 
 .row {
