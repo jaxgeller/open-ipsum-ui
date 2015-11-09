@@ -5,7 +5,9 @@
   padding: 40px 40px 20px 40px;
   overflow: hidden;
   border: 1px solid $light-gray;
+}
 
+.highlight {
   transition: .22s all;
   &:hover {border-color: $yellow;}
 }
