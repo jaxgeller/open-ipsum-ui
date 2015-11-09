@@ -1,7 +1,7 @@
 <form {{action "signup" on="submit"}}>
-  {{input value=username type="text"}}
-  {{input value=email type="email"}}
-  {{input value=password type="password"}}
-  {{input value=passwordConfirmation type="password"}}
+  {{input value=model.user.email type="email" placeholder="email"}}
+  {{input value=model.user.username type="text" placeholder="username"}}
+  {{input value=model.user.password type="password" placeholder="password"}}
+  {{input value=model.user.passwordConfirmation type="password" placeholder="confirm password"}}
   <button type="submit">Login</button>
 </form>

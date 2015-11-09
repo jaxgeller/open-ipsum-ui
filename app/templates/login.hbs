@@ -1,5 +1,5 @@
 <form {{action "login" on="submit"}}>
-  {{input value=email type="text"}}
-  {{input value=password type="password"}}
+  {{input value=model.user.email type="text"}}
+  {{input value=model.user.password type="password"}}
   <button type="submit">Login</button>
 </form>

@@ -10,10 +10,20 @@ export default Ember.Route.extend({
     }
   },
 
+  model() {
+    return {
+      user: {
+        username: '',
+        email: '',
+        password: '',
+        passwordConfirmation: ''
+      }
+    }
+  },
+
   actions: {
     signup() {
-      let data = {user: this.get('controller').getProperties('username', 'email', 'password', 'passwordConfirmation')};
-      this.get('api').request('/users', 'POST', data).then(res=> {
+      this.get('api').request('/users', 'POST', this.currentModel).then(res=> {
         this.get('session').save(res);
         this.transitionTo('browse');
       });
