@@ -2,14 +2,16 @@ import Ember from 'ember';
 import random from 'open-ipsum-ui/utils/random-int';
 
 export function htmlify(params) {
-  let text = params[0].match(/\(?[A-Z][^\.]+[\.!\?]\)?/g);
+  let text = params[0].match(/[^\.!\?]+[\.!\?]+/g);
   let holder = [];
 
   for (let i =0; i < text.length; i++) {
-    let r = random(3, 6) + i;
+    let r = random(2, 6) + i;
     holder.push(text.slice(i, r));
     i = r;
   }
+
+  console.log(text)
 
   for (let i =0; i < holder.length; i++) {
     holder[i].unshift('<p>');
