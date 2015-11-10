@@ -11,8 +11,6 @@ export function htmlify(params) {
     i = r;
   }
 
-  console.log(text)
-
   for (let i =0; i < holder.length; i++) {
     holder[i].unshift('<p>');
     holder[i].push('</p>');
