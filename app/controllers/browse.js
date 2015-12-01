@@ -8,12 +8,12 @@ export default Ember.Controller.extend({
     search() {
       let q = this.get('query');
 
-      this.get('api').request(`/search?q=${q}`).then(res=> {
-        if (res.ipsums.length)
-          this.set('searchResults', res);
-        else
-          this.set('searchResults', null);
-      });
+      // this.get('api').request(`/search?q=${q}`).then(res=> {
+      //   if (res.ipsums.length)
+      //     this.set('searchResults', res);
+      //   else
+      //     this.set('searchResults', null);
+      // });
     }
   }
 });

@@ -1,29 +1,23 @@
 <div class="container">
-  <form {{action "search" on="submit"}}>
-    {{input type="text" value=query placeholder="search"}}
-  </form>
+  <div class="bar">
+    <form {{action "search" on="submit"}}>
+      {{input type="text" value=query placeholder="Search for ipsums..." class="bar-input search"}}
+    </form>
+  </div>
 </div>
 
 <div class="container">
-  {{#if searchResults}}
-    {{#each searchResults.ipsums as |ipsum|}}
-      {{#link-to 'ipsums.show' ipsum.id class="card highlight"}}
-        <h3 class="card-title">{{ipsum.title}}</h3>
-        <div class="card-content">
-          <p>{{truncate ipsum.generated_sample size=25}}</p>
-        </div>
-      {{/link-to}}
-    {{/each}}
-  {{/if}}
+  <div class="row">
+    <p class="more">More...</p>
+    <h2 class="title">Featured</h2>
+  </div>
 </div>
 
-<main class="container">
+<div class="container">
   {{#each model.ipsums as |ipsum|}}
-    {{#link-to 'ipsums.show' ipsum.id class="card highlight"}}
+    {{#link-to 'ipsums.show' ipsum.id class="card"}}
       <h3 class="card-title">{{ipsum.title}}</h3>
-      <div class="card-content">
-        <p>{{truncate ipsum.generated_sample size=25}}</p>
-      </div>
+      <p class="card-content">{{truncate ipsum.generated_sample size=25}}</p>
     {{/link-to}}
   {{/each}}
-</main>
+</div>
