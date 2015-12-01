@@ -1,0 +1,31 @@
+.actions {
+  lost-column: 1/3;
+}
+
+.input-block {
+  lost-column: 1/2.5;
+  margin-bottom: 60px;
+}
+
+.input-block-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid $gray;
+  outline: none;
+  color: $gray;
+
+  &::placeholder {
+    color: $gray-trans;
+  }
+
+  &.active {
+    border-color: $yellow;
+  }
+}
+
+.input-block-info {
+  color: $gray-trans;
+  font-size: 10px;
+}

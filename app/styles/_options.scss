@@ -1,0 +1,53 @@
+.options {
+  height: 290px;
+  margin-bottom: $gutter;
+  padding: 40px 40px 20px 40px;
+  border: 1px solid $gray-trans;
+}
+
+.option-row {
+  margin-bottom: 20px;
+  font-family: $serif;
+  font-size: 12px;
+  line-height: 22px;
+
+  @include clearfix;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.option-action {
+  display: inline-block;
+  width: 58px;
+  height: 24px;
+  margin-right: 20px;
+  float: left;
+  background-color: $gray-trans;
+
+  &.regenerate {
+    background-image: url("");
+  }
+
+  &.decrement {
+    width: 24px;
+    margin-right: 10px;
+    background-image: url("");
+  }
+
+  &.increment {
+    width: 24px;
+    background-image: url("");
+  }
+
+  &.htmlify {
+    border: 1px solid $gray-trans;
+    background-color: white;
+    background-image: url("");
+  }
+
+  &.apiify {
+    background-image: url("");
+  }
+}

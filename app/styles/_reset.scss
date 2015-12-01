@@ -1,5 +1,5 @@
 html, body, div,
-header, footer, main, section, nav, figure,
+header, footer, main, section, nav,
 h1, h2, h3, h4, h5, h6, img, svg,
 p, a, hr, span, ol, ul, li,
 form, input, label {
@@ -35,6 +35,11 @@ input {
   opacity: 1;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 a {
   background-color: transparent;
 
@@ -43,8 +48,4 @@ a {
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
-}
-
-ul {
-  list-style: none;
 }

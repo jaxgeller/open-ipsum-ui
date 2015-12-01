@@ -1,27 +1,23 @@
 .card {
-  lost-column: 1/3;
   height: 280px;
   margin-bottom: $gutter;
   padding: 40px 40px 20px 40px;
-  overflow: hidden;
-  border: 1px solid $light-gray;
+  transition: border ease .22s;
+  border: 1px solid $gray-trans;
+  cursor: pointer;
+
+  lost-column: 1/3;
+  &:hover {
+    border-color: $yellow;
+  }
 
   @include max($tablet) {
     lost-column: 1/2;
   }
 
-  @include max(700px) {
+  @include max($mobile) {
     lost-column: 1/1;
   }
-}
-
-.highlight {
-  transition: .22s all;
-  &:hover {border-color: $yellow;}
-}
-
-.no-highlight {
-  &:hover{border-color: $light-gray;}
 }
 
 .card-title {
@@ -31,8 +27,9 @@
 }
 
 .card-content {
-  font-family: $serif;
+  height: 150px;
   font-size: 12px;
   line-height: 22px;
-  text-align: justify;
+  overflow: hidden;
+  font-family: $serif;
 }

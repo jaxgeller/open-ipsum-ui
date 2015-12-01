@@ -1,0 +1,17 @@
+.button {
+  display: block;
+  height: 40px;
+  padding-top: 11px;
+  transition: background ease .22s;
+  background-color: $gray-trans;
+  text-align: center;
+  margin-bottom: 20px;
+
+  &.active {
+    background-color: $yellow;
+  }
+
+  &.error {
+    background-color: $red;
+  }
+}

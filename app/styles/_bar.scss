@@ -1,33 +1,36 @@
 .bar {
-  lost-utility: clearfix;
   margin-bottom: 60px;
-  border-bottom: 2px solid $gray;
   padding-bottom: 20px;
-}
+  border-bottom: 2px solid $gray;
+  transition: border ease .22s;
 
-.bar-info {
-  lost-column: 2/3;
-  padding-top: 7px;
+  &.active {
+    border-color: $yellow;
+  }
 
-  @include max(750px) {
-    lost-column: 1/2;
+  &.error {
+    border-color: $red;
   }
 }
 
-.bar-action {
-  lost-column: 1/3;
+.bar-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: $gray;
+  font-size: 24px;
 
-  @include max(750px) {
-    lost-column: 1/2;
+  &::placeholder {
+    color: $gray-trans;
+  }
+
+  &.search {
+    padding-left: 40px;
+    background: url("images/search-icon.svg") center left no-repeat;
+  }
+
+  &.add {
+    padding-left: 40px;
+    background: url("images/add-icon.svg") center left no-repeat;
   }
 }
-
-.button {
-  display: block;
-  padding: 11px;
-  color: white;
-  text-align: center;
-  cursor: pointer;
-  background-color: $gray;
-}
-
