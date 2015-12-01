@@ -12,7 +12,7 @@ export function htmlify(params) {
   }
 
   for (let i =0; i < holder.length; i++) {
-    holder[i].unshift('<p>');
+    holder[i].unshift('<p class="content-text">');
     holder[i].push('</p>');
     holder[i] = holder[i].join('');
   }

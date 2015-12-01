@@ -1,25 +1,34 @@
-<main class="container">
+<div class="container">
   <div class="bar">
-    <div class="bar-info">
-      <h2>{{model.ipsum.title}}</h2>
-    </div>
-    <div class="bar-action">
-      <div class="button">Copy to clipboard</div>
-    </div>
+    <h2 class="title">{{model.ipsum.title}}</h2>
   </div>
+</div>
 
+<div class="container">
   <div class="content">
     {{{htmlify model.generated.text}}}
-  </div>
 
-  <div class="card no-highlight">
-    <h3 class="card-title">Options</h3>
-    <div class="card-content">
-      <ul>
-        <li {{action "regenerate"}}>Regenerate</li>
-        <li {{action "HTMLify"}}>HTMLify</li>
-        <li {{action "curl"}}>API</li>
-      </ul>
+  </div>
+  <div class="actions">
+    <div class="options">
+      <h3 class="card-title">Options</h3>
+      <div class="option-row">
+        <a {{action "regenerate"}} href="#" class="option-action regenerate"></a>
+        <p>Regenerate</p>
+      </div>
+      <div class="option-row">
+        <a {{action "decrement"}} href="#" class="option-action decrement"></a>
+        <a {{action "increment"}} href="#" class="option-action increment"></a>
+        <p>3 Paragraphs</p>
+      </div>
+      <div class="option-row">
+        <a {{action "htmlify"}} href="#" class="option-action htmlify"></a>
+        <p>HTML</p>
+      </div>
+      <div class="option-row">
+        <a {{action "apiify"}} href="#" class="option-action apiify"></a>
+        <p>API</p>
+      </div>
     </div>
   </div>
-</main>
+</div>
