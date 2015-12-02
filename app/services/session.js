@@ -20,7 +20,7 @@ export default Ember.Service.extend({
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('email');
-    this.set('email', data.null);
+    this.set('email', null);
     this.set('username', null);
     this.set('token', null);
     this.set('loggedIn', false);
