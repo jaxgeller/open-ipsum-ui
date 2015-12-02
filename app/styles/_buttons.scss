@@ -2,7 +2,6 @@
   display: block;
   width: 100%;
   height: 40px;
-  margin-bottom: 20px;
   padding-top: 11px;
   transition: background ease .22s;
   border: none;
@@ -12,17 +11,27 @@
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
-
   &.active {
     background-color: $yellow;
   }
-
   &.error {
     background-color: $red;
   }
 }
 
-
 button.button {
   padding-top: 2px;
+}
+
+.error-text {
+  margin-top: 10px;
+  color: $red;
+  font-family: $serif;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.button-wrapper {
+  margin-bottom: 20px;
+  text-align: center;
 }
