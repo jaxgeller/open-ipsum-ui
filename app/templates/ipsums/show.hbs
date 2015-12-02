@@ -6,8 +6,7 @@
 
 <div class="container">
   <div class="content">
-    {{{htmlify model.generated.text}}}
-
+    {{{htmlify model.generated.text paragraphs paragraphHTML}}}
   </div>
   <div class="actions">
     <div class="options">
@@ -17,12 +16,12 @@
         <p>Regenerate</p>
       </div>
       <div class="option-row">
-        <a {{action "decrement"}} href="#" class="option-action decrement"></a>
-        <a {{action "increment"}} href="#" class="option-action increment"></a>
-        <p>3 Paragraphs</p>
+        <a {{action "editParagraphs" -1}} href="#" class="option-action decrement"></a>
+        <a {{action "editParagraphs" 1}} href="#" class="option-action increment"></a>
+        <p>{{paragraphs}} Paragraphs</p>
       </div>
       <div class="option-row">
-        <a {{action "htmlify"}} href="#" class="option-action htmlify"></a>
+        <a {{action "addHTML"}} href="#" class="option-action addHTML"></a>
         <p>HTML</p>
       </div>
       <div class="option-row">

@@ -9,12 +9,8 @@ export default Ember.Route.extend({
   actions: {
     regenerate() {
       this.get('api').request(`/ipsums/${this.currentModel.ipsum.id}`).then(res=> {
-        this.controller.set('model.generated', res.generated)
+        this.controller.set('model.generated', res.generated);
       });
-    },
-
-    HTMLify() {
-
     },
 
     curl() {
