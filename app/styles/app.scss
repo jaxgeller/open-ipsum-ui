@@ -23,6 +23,10 @@ body {
   color: $gray;
 }
 
+::selection {
+  background-color: $yellow;
+}
+
 @import "font";
 @import "nav";
 @import "layout";
