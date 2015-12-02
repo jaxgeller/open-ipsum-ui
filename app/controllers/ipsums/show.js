@@ -13,6 +13,10 @@ export default Ember.Controller.extend({
 
     addHTML() {
       this.toggleProperty('paragraphHTML');
+    },
+
+    apiify() {
+      window.alert('curl https://openipsum.com/ipsums/' + this.get('model.ipsum.id'))
     }
   }
 });
