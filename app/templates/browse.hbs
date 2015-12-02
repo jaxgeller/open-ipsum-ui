@@ -1,10 +1,25 @@
 <div class="container">
-  <div class="bar">
-    <form {{action "search" on="submit"}}>
-      {{input type="text" value=query placeholder="Search for ipsums..." class="bar-input search"}}
-    </form>
+  <div class="bar {{if searchResults 'active'}}">
+    {{input type="text" value=query placeholder="Search for ipsums..." class="bar-input search" key-up="search" maxlength=60}}
   </div>
 </div>
+
+{{#if searchResults}}
+  <div class="container">
+    <div class="search-results">
+      {{#each searchResults.ipsums as |ipsum|}}
+        {{#link-to 'ipsums.show' ipsum.id class="card"}}
+          <h3 class="card-title">{{ipsum.title}}</h3>
+          <p class="card-content">{{truncate ipsum.generated_sample size=25}}</p>
+        {{/link-to}}
+      {{/each}}
+      {{#if noResults}}
+        <h2 class="title no-results">No ipsums found for "{{query}}"</h2>
+        <p>How about making your own? Create a new ipsum.</p>
+      {{/if}}
+    </div>
+  </div>
+{{/if}}
 
 <div class="container">
   <div class="row">
