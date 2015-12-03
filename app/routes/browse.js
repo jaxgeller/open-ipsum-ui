@@ -5,5 +5,15 @@ export default Ember.Route.extend({
 
   model() {
     return this.get('api').request('/ipsums');
+  },
+
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.setProperties({
+      query: null,
+      searchResults: null,
+      noResults: false,
+    });
   }
 });
