@@ -1,15 +1,42 @@
 .nav {
   position: fixed;
   left: 60px;
+
+  @include max($tablet) {
+    position: static;
+    padding: 0 40px;
+
+    * {
+      display: inline-block;
+    }
+  }
 }
 
 .nav-logo {
   width: 60px;
+
+  @include max($tablet) {
+    margin-right: 40px;
+  }
 }
 .nav-items {
   margin-top: 60px;
+
+  @include max($tablet) {
+    margin-top: 0;
+  }
 }
+
 .nav-item {
   margin-bottom: 20px;
   cursor: pointer;
+
+  @include max($tablet) {
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
