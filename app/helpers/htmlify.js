@@ -5,23 +5,21 @@ export function htmlify(params) {
   let text = params[0].match(/[^\.!\?]+[\.!\?]+/g);
   let numParagraphs = params[1];
   let paragraphHTML = params[2];
-
-  let paragraphLength = Math.floor(text.length/ numParagraphs);
   let holder = [];
 
-  while (text.length) {
-    holder.push(text.splice(0, paragraphLength));
+  function createParagraph() {
+    let h = [];
+    let pLength = random(3, 6);
+
+    for (let i =0; i < pLength; i++) {
+      h.push(text[random(0, text.length)]);
+    }
+
+    return h;
   }
 
-  // trim the length if it didnt get it right
-  if (holder.length > numParagraphs)
-    holder = holder.slice(0, numParagraphs);
-
-  // add to length if it didnt get it right
-  if (holder.length < numParagraphs) {
-    while (holder.length !== numParagraphs) {
-      holder.push(holder[random(0, holder.length)]);
-    }
+  for (let i =0; i < numParagraphs; i++) {
+    holder.push(createParagraph());
   }
 
   // go in and add tags
@@ -30,7 +28,7 @@ export function htmlify(params) {
 
   if (paragraphHTML) {
     before += '&lt;p&gt;';
-    after = '&lt;/p&gt;' + after;
+    after = ' &lt;/p&gt;' + after;
   }
 
   for (let i =0; i < holder.length; i++) {
