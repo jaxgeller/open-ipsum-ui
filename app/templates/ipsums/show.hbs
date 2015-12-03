@@ -9,6 +9,12 @@
     {{{htmlify model.generated.text paragraphs paragraphHTML}}}
   </div>
   <div class="actions">
+    {{#if currentUser}}
+      <div class="button-wrapper">
+      {{link-to 'Edit' 'ipsums.edit' model.ipsum.id class="button active"}}
+      </div>
+    {{/if}}
+
     <div class="options">
       <h3 class="card-title">Options</h3>
       <div class="option-row">

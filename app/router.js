@@ -15,6 +15,7 @@ Router.map(function() {
 
   this.route('ipsums', function() {
     this.route('show', {path: '/:id'});
+    this.route('edit', {path: '/:id/edit'});
     this.route('create', {path: '/create'});
   });
 });

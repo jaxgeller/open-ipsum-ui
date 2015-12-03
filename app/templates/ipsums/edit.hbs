@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="bar">
+    {{input value=model.ipsum.title class="bar-input add"}}
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    {{textarea
+      value=model.ipsum.text class="content-input"
+      spellcheck="false"
+    }}
+  </div>
+  <div class="actions">
+    <div class="button-wrapper">
+      <button {{action "publish"}} class="button active">Publish</button>
+    </div>
+
+    <div class="button-wrapper">
+      <button {{action "delete"}} class="button">Delete Ipsum</button>
+    </div>
+  </div>
+</div>
+
