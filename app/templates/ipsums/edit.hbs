@@ -13,7 +13,10 @@
   </div>
   <div class="actions">
     <div class="button-wrapper">
-      <button {{action "publish"}} class="button active">Publish</button>
+      <button {{action "publish"}} class="button active">Update</button>
+      {{#each-in errors as |key val|}}
+        <p class="error-text">{{key}} {{val}}</p>
+      {{/each-in}}
     </div>
 
     <div class="button-wrapper">

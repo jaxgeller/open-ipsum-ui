@@ -10,5 +10,4 @@ export default Ember.Controller.extend({
       return this.get('isValid') > 0;
     }
   }
-
 });

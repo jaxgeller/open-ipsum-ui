@@ -10,9 +10,9 @@ export default Ember.Route.extend(needsAuthorization, {
 
   actions: {
     publish() {
-      let ipsum = this.currentModel;
+      let ipsum = this.currentModel.ipsum;
 
-      this.get('api').authenticated('/ipsums', 'POST', ipsum)
+      this.get('api').authenticated(`/ipsums/${ipsum.id}`, 'PUT', this.currentModel)
       .then((res, err) => {
         this.transitionTo('ipsums.show', res.ipsum.id);
       }, (err) => {
