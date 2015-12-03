@@ -8,25 +8,34 @@
   <form {{action "signup" on="submit"}}>
     <div class="content">
       <div class="row">
-        <div class="input-block">
-          {{input value=model.user.email type="email" placeholder="Email" class="input-block-input"}}
+        <div class="input-block {{if errors.email 'error' 'hide-text'}}">
+          {{input value=model.user.email type="email" placeholder="Email" class="input-block-input" }}
+          <p class="input-block-info">Email</p>
         </div>
 
-        <div class="input-block">
-          {{input value=model.user.username type="text" placeholder="Username" class="input-block-input"}}
+        <div class="input-block {{if errors.username 'error' 'hide-text'}}">
+          {{input value=model.user.username type="text" placeholder="Username" class="input-block-input" }}
+          <p class="input-block-info">Username</p>
         </div>
 
-        <div class="input-block">
-          {{input value=model.user.password type="password" placeholder="Password" class="input-block-input"}}
+        <div class="input-block {{if errors.password_confirmation 'error' 'hide-text'}}">
+          {{input value=model.user.password type="password" placeholder="Password" class="input-block-input" }}
+          <p class="input-block-info">Password</p>
         </div>
-        <div class="input-block">
-          {{input value=model.user.passwordConfirmation type="password" placeholder="Confirm Password" class="input-block-input"}}
+        <div class="input-block {{if errors.password_confirmation 'error' 'hide-text'}}">
+          {{input value=model.user.password_confirmation type="password" placeholder="Confirm Password" class="input-block-input" }}
+          <p class="input-block-info">Password Confirmation</p>
         </div>
       </div>
       <p>Sign up with an account to create ipsum generators and collect favorites.</p>
     </div>
     <div class="actions">
-      <button class="button active" type="submit">Create Account</button>
+      <div class="button-wrapper">
+        <button class="button {{if isValid 'active'}}" type="submit">Create Account</button>
+        {{#each-in errors as |key val|}}
+          <p class="error-text">{{key}} {{val}}</p>
+        {{/each-in}}
+      </div>
     </div>
   </form>
 

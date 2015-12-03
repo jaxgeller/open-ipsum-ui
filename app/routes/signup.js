@@ -10,14 +10,13 @@ export default Ember.Route.extend(ifLoggedIn, {
         username: '',
         email: '',
         password: '',
-        passwordConfirmation: ''
+        password_confirmation: ''
       }
     }
   },
 
   setupController(controller, model) {
     this._super(controller, model);
-
     controller.setProperties({errors: null});
   },
 
@@ -26,6 +25,8 @@ export default Ember.Route.extend(ifLoggedIn, {
       this.get('api').request('/users', 'POST', this.currentModel).then(res=> {
         this.get('session').save(res);
         this.transitionTo('browse');
+      }, err=> {
+        if (err) this.controller.set('errors', err.errors);
       });
     }
   }

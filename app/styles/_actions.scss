@@ -3,8 +3,10 @@
 }
 
 .input-block {
-  lost-column: 1/2.5;
+  height: 60px;
   margin-bottom: 60px;
+
+  lost-column: 1/2.5;
 }
 
 .input-block-input {
@@ -15,17 +17,33 @@
   border-bottom: 1px solid $gray;
   outline: none;
   color: $gray;
-
   &::placeholder {
     color: $gray-trans;
   }
-
   &.active {
     border-color: $yellow;
   }
+  transition: border ease .22s;
 }
 
 .input-block-info {
   color: $gray-trans;
   font-size: 10px;
+  transition: opacity ease .22s;
+}
+
+.input-block.error {
+  .input-block-input {
+    border-color: $red;
+  }
+  .input-block-info {
+    opacity: 1;
+    color: $red;
+  }
+}
+
+.input-block.hide-text {
+  .input-block-info {
+    opacity: 0;
+  }
 }
