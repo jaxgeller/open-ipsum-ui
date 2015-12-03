@@ -9,6 +9,12 @@ export default Ember.Route.extend(needsAuthorization, {
     return this.get('api').authenticated(`/users/${this.get('session.username')}`);
   },
 
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.setProperties({errors: null});
+  },
+
   actions: {
     save() {
 

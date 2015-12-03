@@ -1,14 +1,8 @@
 import Ember from 'ember';
+import ifLoggedIn from 'open-ipsum-ui/mixins/if-logged-in';
 
-export default Ember.Route.extend({
-  session: Ember.inject.service(),
+export default Ember.Route.extend(ifLoggedIn, {
   api: Ember.inject.service(),
-
-  beforeModel() {
-    if (this.get('session.loggedIn')) {
-      this.transitionTo('browse');
-    }
-  },
 
   model() {
     return {
@@ -19,6 +13,12 @@ export default Ember.Route.extend({
         passwordConfirmation: ''
       }
     }
+  },
+
+  setupController(controller, model) {
+    this._super(controller, model);
+
+    controller.setProperties({errors: null});
   },
 
   actions: {
