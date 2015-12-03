@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   session: Ember.inject.service(),
 
-  currentUser: Ember.computed('session', 'model', function() {
+  currentUser: Ember.computed('session.username', 'model.ipsum.user.username', function() {
     return this.get('model.ipsum.user.username') === this.get('session.username');
   }),
 

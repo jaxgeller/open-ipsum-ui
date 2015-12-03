@@ -5,4 +5,3 @@ export function notBlank(...props) {
 export function betweenLength(min, max, ...props) {
   return props.every(p => p.trim().length >= min && p.trim().length <= max);
 }
-
