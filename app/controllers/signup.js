@@ -14,7 +14,6 @@ export default Ember.Controller.extend({
 
   actions: {
     signup() {
-
       return this.get('isValid') > 0;
     }
   }
