@@ -18,8 +18,11 @@ export default Ember.Route.extend(needsAuthorization, {
     create() {
       let ipsum = this.currentModel;
 
-      this.get('api').authenticated('/ipsums', 'POST', ipsum).then((res) => {
+      this.get('api').authenticated('/ipsums', 'POST', ipsum)
+      .then((res, err) => {
         this.transitionTo('ipsums.show', res.ipsum.id);
+      }, (err) => {
+        this.controller.set('errors', err.errors);
       });
     }
   }
