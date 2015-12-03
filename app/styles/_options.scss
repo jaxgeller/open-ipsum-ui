@@ -26,6 +26,11 @@
   float: left;
   background-color: $gray-trans;
 
+  &.type {
+    text-align: center;
+    line-height: 2.3;
+  }
+
   &.regenerate {
     background-image: url("");
   }

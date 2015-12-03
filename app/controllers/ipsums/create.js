@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
   actions: {
     create() {
       return this.get('isValid') > 0;
+    },
+
+    toggleMarkov() {
+      this.toggleProperty('model.ipsum.g_markov');
     }
   }
 });

@@ -18,5 +18,13 @@
         <p class="error-text">{{key}} {{val}}</p>
       {{/each-in}}
     </div>
+    <div class="options">
+      <h3 class="card-title">Options</h3>
+      <div class="option-row">
+
+        <a {{action "toggleMarkov"}} href="#" class="option-action type">{{model.ipsum.g_markov}}</a>
+        <p>Use Markov</p>
+      </div>
+    </div>
   </div>
 </div>
