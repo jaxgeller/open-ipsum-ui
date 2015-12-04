@@ -11,17 +11,31 @@ export default Ember.Route.extend(needsAuthorization, {
 
   setupController(controller, model) {
     this._super(controller, model);
-
     controller.setProperties({errors: null});
   },
 
   actions: {
     save() {
+      let u = this.currentModel;
+      delete u.user.ipsums;
+      delete u.user.username;
 
+      this.get('api').authenticated(`/users/${this.get('session.username')}`, 'PUT', u)
+        .then(res => {
+          console.log(res)
+        }, err => {
+          this.controller.set('errors', err.errors);
+        });
     },
 
     delete() {
-
+      let conf = confirm('Do you really want to delete your account?');
+      if (conf) {
+        this.get('api').authenticated(`/users/${this.get('session.username')}`, 'DELETE').then(res=> {
+          this.get('session').delete();
+          this.transitionTo('browse');
+        });
+      }
     }
   }
 });

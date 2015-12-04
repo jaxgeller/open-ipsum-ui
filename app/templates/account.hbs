@@ -8,27 +8,27 @@
   <div class="content">
     <div class="row">
       <div class="input-block">
-        {{input value=session.email type="text" class="input-block-input" placeholder="Email"}}
+        {{input value=model.user.email type="text" class="input-block-input" placeholder="Email"}}
         <p class="input-block-info">Email</p>
       </div>
 
       <div class="input-block">
-        {{input value=model.user.username type="text" class="input-block-input" placeholder="Email"}}
+        {{input value=model.user.username type="text" class="input-block-input" placeholder="Username" disabled="true"}}
         <p class="input-block-info">Username</p>
       </div>
     </div>
 
     <div class="row">
       <div class="input-block">
-        {{input value=model.user.newPassword type="text" class="input-block-input" placeholder="New Password"}}
+        {{input value=model.user.password type="text" class="input-block-input" placeholder="New Password"}}
       </div>
 
       <div class="input-block">
-        {{input value=model.user.confirmNewPassword type="text" class="input-block-input" placeholder="Confirm New Password"}}
+        {{input value=model.user.password_confirmation type="text" class="input-block-input" placeholder="Confirm New Password"}}
       </div>
 
       <div class="input-block">
-        {{input value=model.user.password type="text" class="input-block-input" placeholder="Old Password"}}
+        {{input value=model.user.current_password type="text" class="input-block-input" placeholder="Old Password"}}
       </div>
     </div>
 
@@ -36,6 +36,9 @@
   <div class="actions">
     <div class="button-wrapper">
       <button {{action 'save'}} class="button active">Save</button>
+      {{#each-in errors as |key val|}}
+        <p class="error-text">{{key}} {{val}}</p>
+      {{/each-in}}
     </div>
     <div class="button-wrapper">
       <button {{action 'logout'}} class="button">Log Out</button>
