@@ -7,7 +7,7 @@
       <li class="nav-item">{{link-to 'Browse' 'browse'}}</li>
       <li class="nav-item">{{link-to 'Create' 'ipsums.create'}}</li>
       {{#if session.loggedIn}}
-        <li class="nav-item">{{link-to 'Profile' 'account'}}</li>
+        <li class="nav-item profile">{{link-to 'Profile' 'account'}}</li>
       {{else}}
         <li class="nav-item">{{link-to 'Sign Up' 'signup'}}</li>
         <li class="nav-item">{{link-to 'Log In' 'login'}}</li>
