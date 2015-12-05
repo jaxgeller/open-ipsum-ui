@@ -11,7 +11,10 @@ export default Ember.Route.extend(needsAuthorization, {
 
   setupController(controller, model) {
     this._super(controller, model);
-    controller.setProperties({errors: null});
+    controller.setProperties({
+      errors: null,
+      email: model.user.email
+    });
   },
 
   actions: {
@@ -19,10 +22,15 @@ export default Ember.Route.extend(needsAuthorization, {
       let u = this.currentModel;
       delete u.user.ipsums;
       delete u.user.username;
+      if (!u.user.current_password) delete u.user.current_password;
 
       this.get('api').authenticated(`/users/${this.get('session.username')}`, 'PUT', u)
         .then(res => {
-          console.log(res)
+          this.controller.set('email', this.currentModel.user.email);
+          this.controller.set('model.user.current_password', '')
+          this.controller.set('model.user.password', '')
+          this.controller.set('model.user.password_confirmation', '')
+          this.controller.set('errors', null);
         }, err => {
           this.controller.set('errors', err.errors);
         });

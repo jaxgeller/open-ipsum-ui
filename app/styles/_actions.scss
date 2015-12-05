@@ -35,6 +35,9 @@
   &.active {
     border-color: $yellow;
   }
+  &::focus {
+    background: none;
+  }
   transition: border ease .22s;
 }
 

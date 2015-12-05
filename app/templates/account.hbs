@@ -36,7 +36,7 @@
   </div>
   <div class="actions">
     <div class="button-wrapper">
-      <button {{action 'save'}} class="button active">Save</button>
+      <button {{action 'save'}} class="button {{if isValid 'active'}}">Save</button>
       {{#each-in errors as |key val|}}
         <p class="error-text">{{key}} {{val}}</p>
       {{/each-in}}
