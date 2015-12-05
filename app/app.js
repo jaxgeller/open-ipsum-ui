@@ -13,6 +13,13 @@ App = Ember.Application.extend({
   Resolver
 });
 
-loadInitializers(App, config.modulePrefix);
+App.IndexRoute = Ember.Route.extend({
+  activate: function() {
+    this._super();
+    window.scrollTo(0,0);
+  }
+});
 
+loadInitializers(App, config.modulePrefix);
+console.dir(App)
 export default App;

@@ -36,13 +36,13 @@
   </div>
   <div class="actions">
     <div class="button-wrapper">
-      <button {{action 'save'}} class="button {{if isValid 'active'}}">Save</button>
+      <button {{action 'logout'}} class="button active">Log Out</button>
+    </div>
+    <div class="button-wrapper">
+      <button {{action 'save'}} class="button {{if isValid 'active'}}">Update Profile</button>
       {{#each-in errors as |key val|}}
         <p class="error-text">{{key}} {{val}}</p>
       {{/each-in}}
-    </div>
-    <div class="button-wrapper">
-      <button {{action 'logout'}} class="button">Log Out</button>
     </div>
     <div class="button-wrapper">
       <button {{action 'delete'}} class="button">Delete Account</button>
