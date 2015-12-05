@@ -25,6 +25,8 @@
   margin-right: 20px;
   float: left;
   background-color: $gray-trans;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &.type {
     text-align: center;
@@ -32,27 +34,27 @@
   }
 
   &.regenerate {
-    background-image: url("");
+    background-image: url("images/icon-regenerate.svg");
   }
 
   &.decrement {
     width: 24px;
     margin-right: 10px;
-    background-image: url("");
+    background-image: url("images/icon-mini-minus.svg");
   }
 
   &.increment {
     width: 24px;
-    background-image: url("");
+    background-image: url("images/icon-mini-plus.svg");
   }
 
   &.addHTML {
     border: 1px solid $gray-trans;
     background-color: white;
-    background-image: url("");
+    background-image: url("images/icon-code.svg");
   }
 
   &.apiify {
-    background-image: url("");
+    background-image: url("images/icon-link.svg");
   }
 }

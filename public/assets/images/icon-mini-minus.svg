@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="6px" height="2px" viewBox="0 0 6 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (381) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-mini-minus</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Single" sketch:type="MSArtboardGroup" transform="translate(-949.000000, -337.000000)" fill="#808080">
+            <g id="options" sketch:type="MSLayerGroup" transform="translate(900.000000, 181.000000)">
+                <path d="M49.8027344,156.490234 L49.5527344,156.490234 L49.5527344,156.740234 L49.5527344,157.578125 L49.5527344,157.830891 L49.8054852,157.82811 L54.0652509,157.781235 L54.3125,157.778514 L54.3125,157.53125 L54.3125,156.740234 L54.3125,156.490234 L54.0625,156.490234 L49.8027344,156.490234 L49.8027344,156.490234 Z" id="icon-mini-minus" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

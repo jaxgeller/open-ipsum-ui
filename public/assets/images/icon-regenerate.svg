@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="12px" viewBox="0 0 11 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (381) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-regenerate</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Single" sketch:type="MSArtboardGroup" transform="translate(-964.000000, -288.000000)" fill="#808080">
+            <g id="options" sketch:type="MSLayerGroup" transform="translate(900.000000, 181.000000)">
+                <path d="M68.3108267,108.472687 C65.8730292,108.822986 64,110.881889 64,113.405474 C64,116.172124 66.2447754,118.40975 69.0114254,118.40975 C71.7852243,118.40975 74.0299997,116.172124 74.0299997,113.405474 C74.0299997,113.15526 73.9871059,112.912195 73.9513611,112.66913 L72.5358658,112.66913 C72.5787596,112.905046 72.6073554,113.148111 72.6073554,113.391176 C72.6073554,115.37144 70.998838,116.972808 69.0185743,116.972808 C67.0383107,116.972808 65.4297933,115.37144 65.4297933,113.391176 C65.4297933,111.661126 66.6665644,110.209886 68.3108267,109.881033 L68.3108267,111.253635 L71.1775622,109.116094 L68.3108267,107 L68.3108267,108.472687 Z" id="icon-regenerate" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
