@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: sketchtool 3.4 (381) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-mag</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Browse" sketch:type="MSArtboardGroup" transform="translate(-272.000000, -76.000000)" fill-opacity="0.25" fill="#9B9B9B">
+            <path d="M272,82.5119604 C272,86.1035207 274.895476,89.0128852 278.479875,89.0128852 C279.578159,89.0128852 280.606552,88.7119165 281.525117,88.219331 L284.780031,91.450732 C285.518877,92.1830893 286.717005,92.1830893 287.445866,91.450732 C288.184711,90.7173715 288.184711,89.5345644 287.445866,88.8012039 L284.160998,85.5507414 C284.650234,84.6398094 284.949766,83.6145092 284.949766,82.5119604 C284.949766,78.9204 282.044306,76 278.479875,76 C274.895476,76 272,78.9204 272,82.5119604 M273.99688,82.4818635 C273.99688,79.9938552 276.003744,77.9773646 278.479875,77.9773646 C280.946022,77.9773646 282.952886,79.9938552 282.952886,82.4818635 C282.952886,84.970875 280.946022,86.9773333 278.479875,86.9773333 C276.003744,86.9773333 273.99688,84.970875 273.99688,82.4818635" id="icon-mag" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
