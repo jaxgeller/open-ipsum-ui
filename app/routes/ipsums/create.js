@@ -14,6 +14,13 @@ export default Ember.Route.extend(needsAuthorization, {
     }
   },
 
+  setupController(controller, model) {
+    this._super(controller, model);
+    controller.setProperties({
+      errors: null
+    });
+  },
+
   actions: {
     create() {
       let ipsum = this.currentModel;
