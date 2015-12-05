@@ -1,11 +1,15 @@
+.nav-container {
+  position: relative;
+}
+
 .nav {
   position: fixed;
-  left: 60px;
+  transform: translateX(-120px);
 
-  @include max($tablet) {
+  @include max(1100px) {
     position: static;
-    padding: 0 40px;
-
+    transform: none;
+    margin-bottom: 60px;
     * {
       display: inline-block;
     }
@@ -15,14 +19,15 @@
 .nav-logo {
   width: 60px;
 
-  @include max($tablet) {
+  @include max(1100px) {
     margin-right: 40px;
+    width: 40px;
   }
 }
 .nav-items {
   margin-top: 60px;
 
-  @include max($tablet) {
+  @include max(1100px) {
     margin-top: 0;
   }
 }
@@ -31,7 +36,7 @@
   margin-bottom: 20px;
   cursor: pointer;
 
-  @include max($tablet) {
+  @include max(1100px) {
     margin-right: 20px;
     margin-bottom: 0;
 

@@ -1,5 +1,9 @@
 .actions {
   lost-column: 1/3;
+
+  @include max($tablet) {
+    display: none;
+  }
 }
 
 .input-block {

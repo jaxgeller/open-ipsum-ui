@@ -5,4 +5,9 @@ $container: 1000px;
 .container {
   lost-center: $container;
   padding: 0 $gutter;
+
+
+  @include max(1160px) {
+    margin-right: 20px;
+  }
 }

@@ -3,6 +3,10 @@
   margin-bottom: $gutter;
   padding: 40px 40px 20px 40px;
   border: 1px solid $gray-trans;
+
+  @include max($tablet) {
+    display: none;
+  }
 }
 
 .option-row {

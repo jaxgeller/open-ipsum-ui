@@ -1,5 +1,8 @@
 .content {
   lost-column: 2/3;
+  @include max($tablet) {
+    lost-column: 1/1;
+  }
 }
 
 .content-text {
