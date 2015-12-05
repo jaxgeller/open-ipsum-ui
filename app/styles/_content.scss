@@ -22,4 +22,8 @@
   font-size: 1rem;
   line-height: 32px;
   color: $gray;
+
+  @include max($tablet) {
+    height: 40vh;
+  }
 }

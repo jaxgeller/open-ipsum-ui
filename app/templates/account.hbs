@@ -6,7 +6,7 @@
 
 <div class="container">
   <div class="content">
-    <div class="row">
+    <div class="clearfix">
       <div class="input-block">
         {{input value=model.user.email type="text" class="input-block-input" placeholder="Email"}}
         <p class="input-block-info">Email</p>
@@ -17,21 +17,22 @@
         <p class="input-block-info">Username</p>
       </div>
     </div>
-
     <div class="row">
+      <h2 class="title">Change Password</h2>
+    </div>
+    <div class="clearfix">
       <div class="input-block">
-        {{input value=model.user.password type="text" class="input-block-input" placeholder="New Password"}}
+        {{input value=model.user.password type="password" class="input-block-input" placeholder="New Password"}}
       </div>
 
       <div class="input-block">
-        {{input value=model.user.password_confirmation type="text" class="input-block-input" placeholder="Confirm New Password"}}
+        {{input value=model.user.password_confirmation type="password" class="input-block-input" placeholder="Confirm New Password"}}
       </div>
 
       <div class="input-block">
-        {{input value=model.user.current_password type="text" class="input-block-input" placeholder="Old Password"}}
+        {{input value=model.user.current_password type="password" class="input-block-input" placeholder="Old Password"}}
       </div>
     </div>
-
   </div>
   <div class="actions">
     <div class="button-wrapper">
@@ -48,3 +49,18 @@
     </div>
   </div>
 </div>
+
+
+{{#if model.user.ipsums}}
+  <div class="container">
+    <div class="row">
+      <h2 class="title">Your Ipsums</h2>
+    </div>
+    {{#each model.user.ipsums as |ipsum|}}
+      {{#link-to 'ipsums.show' ipsum.id class="card"}}
+        <h3 class="card-title">{{ipsum.title}}</h3>
+        <p class="card-content">{{truncate ipsum.generated_sample size=25}}</p>
+      {{/link-to}}
+    {{/each}}
+  </div>
+{{/if}}

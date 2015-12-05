@@ -11,3 +11,7 @@ $container: 1000px;
     margin-right: 20px;
   }
 }
+
+.clearfix {
+  @include clearfix;
+}
