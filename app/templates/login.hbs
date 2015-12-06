@@ -8,18 +8,13 @@
   <form {{action "login" on="submit"}}>
     <div class="content">
       <div class="row">
-        <div class="input-block">
-          {{input value=model.user.email type="text" class="input-block-input" placeholder="Email or Username"}}
-        </div>
-
-        <div class="input-block">
-          {{input value=model.user.password type="password" class="input-block-input" placeholder="Password"}}
-        </div>
+        {{input-block value=model.user.email type="email" placeholder="Email" errors=errors.email}}
+        {{input-block value=model.user.password type="password" placeholder="Password" errors=errors.password}}
       </div>
     </div>
     <div class="actions">
       <div class="button-wrapper">
-        <button type="submit" class="button active">Log In</button>
+        <button type="submit" class="button {{if isValid 'active'}}">Log In</button>
         <p class="error-text">
           {{errors}}
         </p>

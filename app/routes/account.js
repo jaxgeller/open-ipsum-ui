@@ -32,6 +32,7 @@ export default Ember.Route.extend(needsAuthorization, {
           this.controller.set('model.user.password_confirmation', '')
           this.controller.set('errors', null);
         }, err => {
+
           this.controller.set('errors', err.errors);
         });
     },

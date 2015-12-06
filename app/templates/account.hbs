@@ -7,31 +7,16 @@
 <div class="container">
   <div class="content">
     <div class="clearfix">
-      <div class="input-block">
-        {{input value=model.user.email type="text" class="input-block-input" placeholder="Email"}}
-        <p class="input-block-info">Email</p>
-      </div>
-
-      <div class="input-block">
-        {{input value=model.user.username type="text" class="input-block-input" placeholder="Username" disabled="true"}}
-        <p class="input-block-info">Username</p>
-      </div>
+      {{input-block value=model.user.email type="email" placeholder="Email" errors=errors.email}}
+      {{input-block value=model.user.username type="text" placeholder="Username" disabled="true"}}
     </div>
     <div class="row">
       <h2 class="title">Change Password</h2>
     </div>
     <div class="clearfix">
-      <div class="input-block">
-        {{input value=model.user.password type="password" class="input-block-input" placeholder="New Password"}}
-      </div>
-
-      <div class="input-block">
-        {{input value=model.user.password_confirmation type="password" class="input-block-input" placeholder="Confirm New Password"}}
-      </div>
-
-      <div class="input-block">
-        {{input value=model.user.current_password type="password" class="input-block-input" placeholder="Old Password"}}
-      </div>
+      {{input-block value=model.user.password type="password" placeholder="New Password" errors=errors.password}}
+      {{input-block value=model.user.password_confirmation type="password" placeholder="Confirm New Password" errors=errors.password}}
+      {{input-block value=model.user.current_password type="password" placeholder="Old Password" errors=errors.password}}
     </div>
   </div>
   <div class="actions">
@@ -41,7 +26,7 @@
     <div class="button-wrapper">
       <button {{action 'save'}} class="button {{if isValid 'active'}}">Update Profile</button>
       {{#each-in errors as |key val|}}
-        <p class="error-text">{{key}} {{val}}</p>
+        <p class="error-text">{{val}}</p>
       {{/each-in}}
     </div>
     <div class="button-wrapper">
