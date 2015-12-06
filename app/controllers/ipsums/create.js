@@ -14,6 +14,11 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
+    commaify() {
+      let text = this.get('model.ipsum.text');
+      this.set('model.ipsum.text', text.replace(/[ ,]+/g, ", "));
+    },
+
     create() {
       return this.get('isValid');
     },
