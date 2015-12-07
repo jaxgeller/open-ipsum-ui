@@ -1,9 +1,0 @@
-{
-  "firebase": "open-ipsum-ui",
-  "public": "dist",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}
