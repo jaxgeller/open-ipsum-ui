@@ -2,25 +2,9 @@ import Ember from 'ember';
 import random from 'open-ipsum-ui/utils/random-int';
 
 export function htmlify(params) {
-  let text = params[0].match(/[^\.!\?]+[\.!\?]+/g);
+  let textBuffer = params[0];
   let numParagraphs = params[1];
   let paragraphHTML = params[2];
-  let holder = [];
-
-  function createParagraph() {
-    let h = [];
-    let pLength = random(3, 6);
-
-    for (let i =0; i < pLength; i++) {
-      h.push(text[random(0, text.length)]);
-    }
-
-    return h;
-  }
-
-  for (let i =0; i < numParagraphs; i++) {
-    holder.push(createParagraph());
-  }
 
   // go in and add tags
   let before = '<p class="content-text">';
@@ -31,13 +15,19 @@ export function htmlify(params) {
     after = ' &lt;/p&gt;' + after;
   }
 
-  for (let i =0; i < holder.length; i++) {
-    holder[i].unshift(before);
-    holder[i].push(after);
-    holder[i] = holder[i].join('');
+  for (let i =0; i < textBuffer.length; i++) {
+    textBuffer[i] = textBuffer[i].join('');
+    textBuffer[i] = before + textBuffer[i];
+    textBuffer[i] = textBuffer[i] + after;
+
+    // textBuffer[i].unshift(before);
+    // textBuffer[i].push(after);
+    // textBuffer[i] = textBuffer[i].join('');
   }
 
-  return holder.join('');
+  textBuffer = textBuffer.slice(0, numParagraphs)
+  return textBuffer.join('');
+
 }
 
 export default Ember.Helper.helper(htmlify);

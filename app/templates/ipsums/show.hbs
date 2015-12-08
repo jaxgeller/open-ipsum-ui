@@ -6,9 +6,11 @@
 
 <div class="container">
   <div class="content">
-    {{{htmlify model.generated.text paragraphs paragraphHTML}}}
+    {{{htmlify textBuffer paragraphs paragraphHTML}}}
   </div>
+
   <div class="actions">
+
     {{#if currentUser}}
       <div class="button-wrapper">
       {{link-to 'Edit' 'ipsums.edit' model.ipsum.id class="button active"}}
