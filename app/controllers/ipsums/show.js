@@ -11,21 +11,17 @@ export default Ember.Controller.extend({
   textBuffer: Ember.computed('model.generated.text', function() {
     let srcText = this.get('model.generated.text');
     let text = srcText.match(/[^\.!\?]+[\.!\?]+/g);
+    let holder = [];
 
-    function createParagraph() {
+    for (let i =0; i < 10; i++) {
       let h = [];
       let pLength = random(3, 6);
 
-      for (let i =0; i < pLength; i++) {
+      for (let j =0; j < pLength; j++) {
         h.push(text[random(0, text.length)]);
       }
 
-      return h;
-    }
-
-    let holder = [];
-    for (let i =0; i < 10; i++) {
-      holder.push(createParagraph());
+      holder.push(h);
     }
 
     return holder;
