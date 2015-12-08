@@ -20,7 +20,10 @@
     </div>
 
     <div class="button-wrapper">
-      <button {{action "delete"}} class="button">Delete Ipsum</button>
+      <button {{action "delete"}} class="button {{if confirmDelete 'error'}}">{{deleteText}}</button>
+      {{#if confirmDelete}}
+        <p class="error-text">Are you sure you want to do that?</p>
+      {{/if}}
     </div>
   </div>
 </div>

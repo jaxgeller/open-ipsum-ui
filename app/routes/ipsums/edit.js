@@ -8,6 +8,14 @@ export default Ember.Route.extend(needsAuthorization, {
     return this.get('api').request(`/ipsums/${params.id}`);
   },
 
+  setupController(controller, model) {
+    this._super(controller, model);
+    controller.setProperties({
+      confirmDelete: false
+    });
+  },
+
+
   actions: {
     publish() {
       let ipsum = this.currentModel.ipsum;
