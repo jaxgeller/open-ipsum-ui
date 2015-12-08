@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
     },
 
     apiify() {
-      window.alert('curl https://openipsum.com/ipsums/' + this.get('model.ipsum.id'))
+      window.alert('curl https://api.openipsum.com/ipsums/' + this.get('model.ipsum.id'))
     }
   }
 });
