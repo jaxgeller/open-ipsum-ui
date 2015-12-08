@@ -21,10 +21,21 @@ export default Ember.Controller.extend({
       return checkPassword + checkEmail;
   }),
 
+  deleteText: Ember.computed('confirmDelete', function() {
+    if (this.get('confirmDelete')) return 'Confirm Delete';
+    else return 'Delete Account';
+  }),
+
 
   actions: {
     save() {
       return this.get('isValid') > 0;
+    },
+
+    delete() {
+      let confirm = this.get('confirmDelete');
+      this.toggleProperty('confirmDelete');
+      return confirm;
     }
   }
 });

@@ -13,7 +13,8 @@ export default Ember.Route.extend(needsAuthorization, {
     this._super(controller, model);
     controller.setProperties({
       errors: null,
-      email: model.user.email
+      email: model.user.email,
+      confirmDelete: false
     });
   },
 
@@ -32,19 +33,15 @@ export default Ember.Route.extend(needsAuthorization, {
           this.controller.set('model.user.password_confirmation', '')
           this.controller.set('errors', null);
         }, err => {
-
           this.controller.set('errors', err.errors);
         });
     },
 
     delete() {
-      let conf = confirm('Do you really want to delete your account?');
-      if (conf) {
-        this.get('api').authenticated(`/users/${this.get('session.username')}`, 'DELETE').then(res=> {
-          this.get('session').delete();
-          this.transitionTo('browse');
-        });
-      }
+      this.get('api').authenticated(`/users/${this.get('session.username')}`, 'DELETE').then(res=> {
+        this.get('session').delete();
+        this.transitionTo('browse');
+      });
     }
   }
 });
