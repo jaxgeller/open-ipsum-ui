@@ -1,9 +1,8 @@
 .bar {
-  margin-bottom: 60px;
-  padding-bottom: 20px;
   height: 59px;
-  border-bottom: 1px solid $gray;
+  margin-bottom: 60px;
   transition: border ease .22s;
+  border-bottom: 1px solid $gray;
 
   &.active {
     border-color: $yellow;
@@ -16,6 +15,7 @@
 
 .bar-input {
   width: 100%;
+  padding-bottom: 29px;
   border: none;
   outline: none;
   color: $gray;
@@ -27,11 +27,11 @@
 
   &.search {
     padding-left: 40px;
-    background: url("images/icon-magnifier.svg") center left no-repeat;
+    background: url("images/icon-magnifier.svg") top 7px left no-repeat;
   }
 
   &.add {
     padding-left: 40px;
-    background: url("images/icon-plus.svg") center left no-repeat;
+    background: url("images/icon-plus.svg") top 7px left no-repeat;
   }
 }
