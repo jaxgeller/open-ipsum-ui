@@ -2,7 +2,7 @@ import Ember from 'ember';
 import random from 'open-ipsum-ui/utils/random-int';
 
 export function htmlify(params) {
-  let textBuffer = params[0];
+  let textBuffer = Ember.copy(params[0]);
   let numParagraphs = params[1];
   let paragraphHTML = params[2];
 
@@ -19,15 +19,9 @@ export function htmlify(params) {
     textBuffer[i] = textBuffer[i].join('');
     textBuffer[i] = before + textBuffer[i];
     textBuffer[i] = textBuffer[i] + after;
-
-    // textBuffer[i].unshift(before);
-    // textBuffer[i].push(after);
-    // textBuffer[i] = textBuffer[i].join('');
   }
 
-  textBuffer = textBuffer.slice(0, numParagraphs)
-  return textBuffer.join('');
-
+  return textBuffer.slice(0, numParagraphs).join('');
 }
 
 export default Ember.Helper.helper(htmlify);

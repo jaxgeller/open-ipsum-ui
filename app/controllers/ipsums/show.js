@@ -27,7 +27,7 @@ export default Ember.Controller.extend({
     for (let i =0; i < 10; i++) {
       holder.push(createParagraph());
     }
-    console.log(holder)
+
     return holder;
   }),
 
