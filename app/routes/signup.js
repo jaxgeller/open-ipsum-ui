@@ -12,7 +12,7 @@ export default Ember.Route.extend(ifLoggedIn, {
         password: '',
         password_confirmation: ''
       }
-    }
+    };
   },
 
   setupController(controller, model) {
@@ -26,7 +26,9 @@ export default Ember.Route.extend(ifLoggedIn, {
         this.get('session').save(res);
         this.transitionTo('browse');
       }, err=> {
-        if (err) this.controller.set('errors', err.errors);
+        if (err) {
+          this.controller.set('errors', err.errors);
+        }
       });
     }
   }
