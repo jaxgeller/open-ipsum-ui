@@ -1,9 +1,11 @@
 export function notBlank(...props) {
   return props.every(p => {
-    if (p === undefined)
+    if (p === undefined) {
       return false;
-    else
+    }
+    else {
       return p.trim().length > 0;
+    }
   });
 }
 

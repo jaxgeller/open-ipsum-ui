@@ -11,7 +11,7 @@ export default Ember.Route.extend(needsAuthorization, {
         text: '',
         g_markov: false
       }
-    }
+    };
   },
 
   setupController(controller, model) {
@@ -26,9 +26,9 @@ export default Ember.Route.extend(needsAuthorization, {
       let ipsum = this.currentModel;
 
       this.get('api').authenticated('/ipsums', 'POST', ipsum)
-      .then((res, err) => {
+      .then(res => {
         this.transitionTo('ipsums.show', res.ipsum.id);
-      }, (err) => {
+      }, err => {
         this.controller.set('errors', err.errors);
       });
     }

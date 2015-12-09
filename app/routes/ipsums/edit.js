@@ -21,18 +21,19 @@ export default Ember.Route.extend(needsAuthorization, {
       let ipsum = this.currentModel.ipsum;
 
       this.get('api').authenticated(`/ipsums/${ipsum.id}`, 'PUT', this.currentModel)
-      .then((res, err) => {
+      .then(res => {
         this.transitionTo('ipsums.show', res.ipsum.id);
-      }, (err) => {
+      }, err => {
         this.controller.set('errors', err.errors);
       });
     },
 
     delete() {
       let id = this.currentModel.ipsum.id;
-      this.get('api').authenticated(`/ipsums/${id}`, 'DELETE').then(res=> {
+      this.get('api').authenticated(`/ipsums/${id}`, 'DELETE')
+      .then(()=> {
         this.transitionTo('browse');
-      })
+      });
     }
   }
 });

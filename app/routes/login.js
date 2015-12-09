@@ -10,12 +10,11 @@ export default Ember.Route.extend(ifLoggedIn, {
         email: '',
         password: ''
       }
-    }
+    };
   },
 
   setupController(controller, model) {
     this._super(controller, model);
-
     controller.setProperties({errors: null});
   },
 
@@ -27,7 +26,9 @@ export default Ember.Route.extend(ifLoggedIn, {
           this.get('session').save(res);
           this.transitionTo('browse');
         }, err => {
-          if (err) this.controller.set('errors', 'This account doesnt exist')
+          if (err) {
+            this.controller.set('errors', 'This account doesnt exist');
+          }
         });
     }
   }

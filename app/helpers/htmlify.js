@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import random from 'open-ipsum-ui/utils/random-int';
 
 export function htmlify(params) {
   let textBuffer = Ember.copy(params[0]);

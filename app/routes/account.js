@@ -21,16 +21,20 @@ export default Ember.Route.extend(needsAuthorization, {
   actions: {
     save() {
       let u = this.currentModel;
+
       delete u.user.ipsums;
       delete u.user.username;
-      if (!u.user.current_password) delete u.user.current_password;
+
+      if (!u.user.current_password) {
+        delete u.user.current_password;
+      }
 
       this.get('api').authenticated(`/users/${this.get('session.username')}`, 'PUT', u)
-        .then(res => {
+        .then(() => {
           this.controller.set('email', this.currentModel.user.email);
-          this.controller.set('model.user.current_password', '')
-          this.controller.set('model.user.password', '')
-          this.controller.set('model.user.password_confirmation', '')
+          this.controller.set('model.user.current_password', '');
+          this.controller.set('model.user.password', '');
+          this.controller.set('model.user.password_confirmation', '');
           this.controller.set('errors', null);
         }, err => {
           this.controller.set('errors', err.errors);
@@ -38,7 +42,7 @@ export default Ember.Route.extend(needsAuthorization, {
     },
 
     delete() {
-      this.get('api').authenticated(`/users/${this.get('session.username')}`, 'DELETE').then(res=> {
+      this.get('api').authenticated(`/users/${this.get('session.username')}`, 'DELETE').then(()=> {
         this.get('session').delete();
         this.transitionTo('browse');
       });

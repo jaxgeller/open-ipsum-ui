@@ -7,10 +7,12 @@ export default Ember.Controller.extend({
   }),
 
   placeholder: Ember.computed('model.ipsum.g_markov', function() {
-    if (this.get('model.ipsum.g_markov'))
+    if (this.get('model.ipsum.g_markov')) {
       return "Just type normal sentences...";
-    else
+    }
+    else {
       return "Add comma separated values here...";
+    }
   }),
 
   actions: {

@@ -22,8 +22,12 @@ export default Ember.Controller.extend({
   }),
 
   deleteText: Ember.computed('confirmDelete', function() {
-    if (this.get('confirmDelete')) return 'Confirm Delete';
-    else return 'Delete Account';
+    if (this.get('confirmDelete')) {
+      return 'Confirm Delete';
+    }
+    else {
+      return 'Delete Account';
+    }
   }),
 
 

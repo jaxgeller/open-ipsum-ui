@@ -14,8 +14,9 @@ export function htmlify(params) {
   }
 
   // trim the length if it didnt get it right
-  if (holder.length > numParagraphs)
+  if (holder.length > numParagraphs) {
     holder = holder.slice(0, numParagraphs);
+  }
 
   // add to length if it didnt get it right
   if (holder.length < numParagraphs) {
