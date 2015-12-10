@@ -1,26 +1,29 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
+addons:
+  ssh_known_hosts: openipsum.com
+after_success:
+- eval "$(ssh-agent -s)"
+- chmod 600 deployment/deploy_key.pem
+- ssh-add deployment/deploy_key.pem
+- git remote add deploy "ssh://ubuntu@openipsum.com/home/ubuntu/git-deploys/ui.git"
+- git push -u deploy master
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- openssl aes-256-cbc -K $encrypted_f6da8829f7b1_key -iv $encrypted_f6da8829f7b1_iv
+  -in deployment/deploy_key.pem.enc -out deployment/deploy_key.pem -d
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
-
+- npm test
 notifications:
   email: false
