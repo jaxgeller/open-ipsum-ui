@@ -1,7 +1,6 @@
 language: node_js
 node_js:
-- '0.12'
-sudo: false
+- '4.2.2'
 addons:
   ssh_known_hosts: openipsum.com
 after_success:
