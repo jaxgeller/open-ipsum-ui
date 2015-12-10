@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jaxgeller/open-ipsum-ui.svg?branch=master)](https://travis-ci.org/jaxgeller/open-ipsum-ui)
+
 # Open-ipsum-ui
 
 UI for [openipsum.com](https://openipsum.com).
