@@ -8,7 +8,7 @@ after_success:
 - chmod 600 deployment/deploy_key.pem
 - ssh-add deployment/deploy_key.pem
 - git remote add deploy "ssh://ubuntu@openipsum.com/home/ubuntu/git-deploys/ui.git"
-- git push -u deploy master
+- git push -u deploy master --force
 cache:
   directories:
   - node_modules
