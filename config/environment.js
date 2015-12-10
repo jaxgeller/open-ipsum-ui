@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.HOST = 'http://api.openipsum.com';
+    ENV.APP.HOST = 'https://api.openipsum.com';
   }
 
   return ENV;
