@@ -15,14 +15,14 @@ export default Ember.Route.extend(needsAuthorization, {
     });
   },
 
-
   actions: {
     publish() {
+
       let ipsum = this.currentModel.ipsum;
 
       this.get('api').authenticated(`/ipsums/${ipsum.id}`, 'PUT', this.currentModel)
-      .then(res => {
-        this.transitionTo('ipsums.show', res.ipsum.id);
+      .then(() => {
+        this.transitionTo('ipsums.show', ipsum.id);
       }, err => {
         this.controller.set('errors', err.errors);
       });
