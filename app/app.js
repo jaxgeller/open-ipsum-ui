@@ -14,7 +14,7 @@ App = Ember.Application.extend({
 });
 
 Ember.Route.reopen({
-  activate: function() {
+  activate() {
     this._super();
     window.scrollTo(0, 0);
   }
