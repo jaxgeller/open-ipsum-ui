@@ -18,6 +18,8 @@ Router.map(function() {
     this.route('edit', {path: '/:id/edit'});
     this.route('create', {path: '/create'});
   });
+
+  this.route('not-found', {path: '*path'});
 });
 
 export default Router;
