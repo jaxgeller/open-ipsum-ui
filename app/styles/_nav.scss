@@ -48,4 +48,10 @@
   &.profile {
     margin-top: 40px;
   }
+
+  &.about {
+    @include max($mobile) {
+      display: none;
+    }
+  }
 }
