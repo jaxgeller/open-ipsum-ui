@@ -10,7 +10,7 @@ export function htmlify(params) {
   let after = '</p>';
 
   if (paragraphHTML) {
-    before += '&lt;p&gt;';
+    before = '<p class="content-text monospace">&lt;p&gt;'
     after = ' &lt;/p&gt;' + after;
   }
 
