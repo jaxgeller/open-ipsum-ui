@@ -1,0 +1,28 @@
+.footer {
+  @include clearfix;
+  border-top: 1px solid $gray-trans;
+  padding: 80px 0;
+  margin-top: 40px;
+}
+
+.footer-left {
+  float: left;
+}
+
+.footer-right {
+  float: right;
+}
+
+
+.footer-text {
+  color: rgba(red($gray), green($gray), blue($gray), .5);
+
+  a {
+    transition: color ease .22s;
+  }
+}
+
+
+.footer-text a:hover {
+  color: rgba(red($gray), green($gray), blue($gray), 1);
+}
