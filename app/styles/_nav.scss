@@ -50,8 +50,14 @@
   }
 
   &.about {
+    margin-top: 40px;
+
     @include max($mobile) {
       display: none;
     }
   }
+}
+
+.nav-spacing {
+  margin-top: 40px;
 }
