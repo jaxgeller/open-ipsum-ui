@@ -19,7 +19,13 @@ Router.map(function() {
     this.route('create', {path: '/create'});
   });
 
+
+  this.route('authors', {path: '/authors/:id'});
+
+
   this.route('not-found', {path: '*path'});
+
+
 });
 
 export default Router;

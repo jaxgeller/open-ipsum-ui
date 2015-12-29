@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="bar">
+    <h2 class="title">Ipsums by {{model.user.username}}</h2>
+  </div>
+</div>
+
+<div class="container">
+
+  {{#if model.user.ipsums}}
+    {{#each model.user.ipsums as |ipsum|}}
+      {{#link-to 'ipsums.show' ipsum.id class="card"}}
+        <h3 class="card-title">{{ipsum.title}}</h3>
+        <p class="card-content">{{truncate ipsum.generated_sample size=25}}</p>
+      {{/link-to}}
+    {{/each}}
+  {{else}}
+    <h1>This user has no ipsums.</h1>
+  {{/if}}
+</div>

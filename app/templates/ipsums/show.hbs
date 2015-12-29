@@ -4,7 +4,7 @@
       {{model.ipsum.title}}
       <span class="by">
         by
-        {{model.ipsum.user.username}}
+        {{#link-to 'authors' model.ipsum.user.username}}{{model.ipsum.user.username}}{{/link-to}}
       </span>
     </h1>
   </div>
