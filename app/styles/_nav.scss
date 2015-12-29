@@ -56,6 +56,10 @@
       display: none;
     }
   }
+  transition: color ease .22s;
+  &:hover {
+    color: darken($gray, 10%);
+  }
 }
 
 .nav-spacing {
