@@ -31,3 +31,10 @@
 .monospace {
   font-family: monospace;
 }
+
+.alert-message {
+  color: $red;
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-family: $serif;
+}

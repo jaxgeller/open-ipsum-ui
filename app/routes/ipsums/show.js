@@ -11,11 +11,19 @@ export default Ember.Route.extend({
     this._super(controller, model);
     controller.setProperties({
       paragraphs: 5,
-      paragraphHTML: false
+      paragraphHTML: false,
+      fourohfour: false
     });
+
+    if (model.ipsum.id === '404-ipsum')
+      controller.set('fourohfour', true);
   },
 
   actions: {
+    error(err, transition) {
+      return this.transitionTo('ipsums.show', '404-ipsum');
+    },
+
     regenerate() {
       this.get('api').request(`/ipsums/${this.currentModel.ipsum.id}`).then(res=> {
         this.controller.set('model.generated', res.generated);

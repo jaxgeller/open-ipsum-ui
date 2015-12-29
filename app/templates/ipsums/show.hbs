@@ -11,6 +11,13 @@
 </div>
 
 <div class="container">
+
+  {{#if fourohfour}}
+    <div class="content">
+    <p class="alert-message">Oh no! The page you requested doesn’t exist. Instead, enjoy our 404 Ipsum.</p>
+    </div>
+  {{/if}}
+
   <div class="content">
     {{{htmlify textBuffer paragraphs paragraphHTML}}}
   </div>
