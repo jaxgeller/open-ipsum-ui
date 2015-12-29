@@ -2,7 +2,7 @@
   height: 280px;
   margin-bottom: $gutter;
   padding: 40px 40px 20px 40px;
-  transition: border ease .22s;
+  transition: border ease .22s, opacity ease .22s;
   border: 1px solid $gray-trans;
   cursor: pointer;
 
@@ -42,4 +42,9 @@
   @include max($mobile) {
     height: 90px;
   }
+}
+
+
+.is-searching .card {
+  opacity: .5;
 }

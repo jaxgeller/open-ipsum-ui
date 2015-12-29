@@ -23,7 +23,7 @@
   </div>
 {{/if}}
 
-<div class="container">
+<div class="container {{if searchResults 'is-searching'}}">
   {{#each model.ipsums as |ipsum|}}
     {{#link-to 'ipsums.show' ipsum.id class="card"}}
       <h3 class="card-title">{{ipsum.title}}</h3>
