@@ -11,12 +11,12 @@ export function htmlify(params) {
 
   if (paragraphHTML) {
     before = '<p class="content-text monospace">&lt;p&gt;';
-    after = ' &lt;/p&gt;' + after;
+    after = '&lt;/p&gt;' + after;
   }
 
   for (let i =0; i < textBuffer.length; i++) {
     textBuffer[i] = textBuffer[i].join('');
-    textBuffer[i] = before + textBuffer[i];
+    textBuffer[i] = before + textBuffer[i].trim();
     textBuffer[i] = textBuffer[i] + after;
   }
 
