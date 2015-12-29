@@ -15,7 +15,9 @@
       {{/each}}
       {{#if noResults}}
         <h2 class="title no-results">No ipsums found for "{{query}}"</h2>
-        <p class="no-results-text">How about making your own? Create a new ipsum.</p>
+        <p class="no-results-text">How about making your own?
+          {{link-to 'Create a new ipsum.' 'ipsums.create'}}
+        </p>
       {{/if}}
     </div>
   </div>
