@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
       let pLength = random(2, 5);
 
       for (let j =0; j < pLength; j++) {
-        let t = text[random(0, text.length)]
+        let t = text[random(0, text.length)];
         h.push(t);
       }
 

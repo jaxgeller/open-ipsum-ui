@@ -15,12 +15,13 @@ export default Ember.Route.extend({
       fourohfour: false
     });
 
-    if (model.ipsum.id === '404-ipsum')
+    if (model.ipsum.id === '404-ipsum') {
       controller.set('fourohfour', true);
+    }
   },
 
   actions: {
-    error(err, transition) {
+    error() {
       return this.transitionTo('ipsums.show', '404-ipsum');
     },
 
