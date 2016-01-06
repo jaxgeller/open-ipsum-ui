@@ -28,6 +28,10 @@
   &.search {
     padding-left: 40px;
     background: url("images/icon-magnifier.svg") top 7px left no-repeat;
+    @include max($mobile) {
+      max-width: 270px;
+      text-overflow: ellipsis;
+    }
   }
 
   &.add {
