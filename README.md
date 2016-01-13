@@ -4,6 +4,8 @@
 
 UI for [openipsum.com](https://openipsum.com).
 
+See the backend API [here](https://github.com/jaxgeller/open-ipsum-api), it's a public API!
+
 ## Contributing
 
 If you find any bugs or would like to ask for features, please open an issue.
